@@ -42,20 +42,103 @@ nav
 
         .header-box
         {
-            width: 85%;
             display: flex;
             justify-content: space-between;
+            width: 85%;
 
-            .logo
+            a
             {
                 display: flex;
-                align-content: center;
+                align-items: center;
 
-                width: 70px;
-
-                img
+                .logo
                 {
-                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    width: 200px;
+
+                    .logo-box
+                    {
+                        display: flex;
+
+                        transition: .2s;
+
+                        overflow: hidden;
+
+                        &:nth-child(1)
+                        {
+                            align-items: center;
+
+                            width: 20px;
+                            height: 23.74px;
+
+                            margin-right: 0px;
+
+                            img
+                            {
+                                width: 66.19px;
+                                height: 23.74px;
+                            }
+                        }
+
+                        &:nth-child(2)
+                        {
+                            align-items: center;
+
+                            width: 20px;
+                            height: 22.46px;
+
+                            img
+                            {
+                                width: 112px;
+                                height: 22.46px;
+                            }
+                        }
+
+                        &:nth-child(3)
+                        {
+                            align-items: flex-end;
+
+                            width: 6px;
+                            height: 22px;
+
+                            img
+                            {
+                                width: 6px;
+                            }
+                        }
+                    }
+
+                    &:hover
+                    {
+
+                        .logo-box
+                        {
+                            &:nth-child(1)
+                            {
+                                align-items: center;
+
+                                width: 66.19px;
+
+                                margin-right: 8px;
+                            }
+
+                            &:nth-child(2)
+                            {
+                                align-items: center;
+
+                                width: 112px;
+                            }
+
+                            &:nth-child(3)
+                            {
+                                align-items: flex-end;
+
+                                width: 6px;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -374,27 +457,13 @@ nav
                         align-items: center;
 
                         position: relative;
-
-                        &::before
-                        {
-                            content: '';
-
-                            position: absolute;
-                            width: 105px;
-                            height: 5px;
-                            left: 0px;
-                            top: 0px;
-
-                            background: @azul;
-                        }
-
                         .projetos-box
                         {
                             display: flex;
                             flex-direction: column;
                             justify-content: space-around;
 
-                            height: 280px;
+                            height: 180px;
 
                             h2
                             {
@@ -403,7 +472,9 @@ nav
                                 font-size: 22px;
                                 line-height: 27px;
 
-                                color: #1ABBC9;
+                                color: @azul;
+
+                                margin: 0;
                             }
 
                             .atributos
@@ -422,18 +493,6 @@ nav
 
                                     color: @roxo;
                                 }
-                            }
-
-                            p
-                            {
-                                width: 100%;
-
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 22px;
-                                line-height: 27px;
-
-                                color: @texto;
                             }
 
                             /* CTA */
@@ -813,21 +872,21 @@ nav
             display: flex;
             justify-content: center;
 
-            gap: 30px;
+            gap: 20px;
 
-            height: 700px;
+            height: 530px;
 
             .botoes-mosaico
             {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 30px;
+                gap: 20px;
 
                 .check-box
                 {
-                    width: 182px;
-                    height: 267px;
+                    width: 142px;
+                    height: 221px;
 
                     position: relative;
 
@@ -861,8 +920,8 @@ nav
 
                     label
                     {
-                        width: 182px;
-                        height: 267px;
+                        width: 142px;
+                        height: 221px;
 
                         margin: 0;
 
@@ -874,8 +933,8 @@ nav
                             align-items: center;
                             gap: 20px;
 
-                            width: 182px;
-                            height: 267px;
+                            width: 142px;
+                            height: 221px;
 
                             background: @fundo-box;
                             border-radius: 15px;
@@ -920,8 +979,8 @@ nav
                                     justify-content: center;
                                     align-items: center;
 
-                                    width: 72px;
-                                    height: 72px;
+                                    width: 46px;
+                                    height: 46px;
                                     
                                     border-radius: 50px;
 
@@ -929,11 +988,16 @@ nav
                                     {
                                         font-style: normal;
                                         font-weight: 700;
-                                        font-size: 30px;
+                                        font-size: 25px;
                                         line-height: 36px;
                                         text-align: center;
 
                                         color: #FFFFFF;
+                                    }
+
+                                    img
+                                    {
+                                        width: 40%;
                                     }
                                 }
 
@@ -1026,12 +1090,12 @@ nav
     align-items: center;
 
     width: 100%;
-    height: 1530px;
+    height: 1370px;
 
     .Linha-tempo
     {
-        width: 80%;
-        height: 1530px;
+        width: 1200px;
+        height: 1370px;
 
         position: relative;
 
@@ -1081,7 +1145,7 @@ nav
                         left: 20px;
 
                         width: 1px;
-                        height: 1530px;
+                        height: 1210px;
 
                         background: @branco;
 
@@ -1097,7 +1161,7 @@ nav
             justify-content: center;
 
             width: 100%;
-            height: 1530px;
+            height: 1360px;
 
             position: relative;
 
@@ -1162,7 +1226,7 @@ nav
                                     left: 15px;
 
                                     width: 1px;
-                                    height: 1590px;
+                                    height: 1267px;
 
                                     background: @azul;
                                 }
@@ -1174,10 +1238,10 @@ nav
                                     position: absolute;
 
                                     top: 90px;
-                                    left: -115px;
+                                    left: -98px;
 
-                                    width: 265px;
-                                    height: 1530px;
+                                    width: 235px;
+                                    height: 1210px;
 
                                     background: #1ABBC9;
 
@@ -1192,7 +1256,7 @@ nav
             .experiencias-certificados
             {
                 width: 100%;
-                height: 1530px;
+                height: 1210px;
 
                 position: absolute;
                 top: 150px;
@@ -1209,37 +1273,37 @@ nav
 
                     &:nth-child(1)
                     {
-                        top: 50px;
+                        top: 10px;
                         left: 1%;
                     }
 
                     &:nth-child(2)
                     {
-                        top: 290px;
-                        left: 20%;
+                        top: 70px;
+                        left: 23%;
                     }
 
                     &:nth-child(3)
                     {
-                        top: 550px;
-                        left: 17%;
+                        top: 280px;
+                        left: 23%;
                     }
 
                     &:nth-child(4)
                     {
-                        top: 550px;
-                        left: 48%;
+                        top: 280px;
+                        left: 46%;
                     }
 
                     &:nth-child(5)
                     {
-                        top: 290px;
+                        top: 80px;
                         right: 15%;
                     }
 
                     &:nth-child(6)
                     {
-                        top: 650px;
+                        top: 280px;
                         right: 0%;
                     }
 
@@ -1257,31 +1321,31 @@ nav
 
                     &:nth-child(9)
                     {
-                        top: 985px;
+                        top: 925px;
                         left: 20%;
                     }
 
                     &:nth-child(10)
                     {
-                        top: 1170px;
-                        left: 40%;
+                        top: 1050px;
+                        left: 25%;
                     }
 
                     &:nth-child(11)
                     {
-                        top: 985px;
+                        top: 925px;
                         right: 22%;
                     }
 
                     &:nth-child(12)
                     {
-                        top: 1170px;
-                        right: 10%;
+                        top: 1050px;
+                        right: 30%;
                     }
 
                     &:nth-child(13)
                     {
-                        top: 1350px;
+                        top: 1050px;
                         right: 0;
                     }
 
@@ -1346,13 +1410,13 @@ nav
                             flex-direction: column;
                             justify-content: space-around;
                             
-                            width: 250px;
+                            width: 210px;
 
                             background: #2C153C;
 
                             border-radius: 30px;
 
-                            gap: 15px;
+                            gap: 10px;
 
                             padding: 20px;
 
@@ -1375,7 +1439,7 @@ nav
                                 {
                                     font-style: normal;
                                     font-weight: 700;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                     line-height: 17px;
 
                                     color: @branco;
@@ -1402,7 +1466,7 @@ nav
                                 {
                                     font-style: normal;
                                     font-weight: 300;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                     line-height: 17px;
 
                                     color: @branco;
@@ -1419,7 +1483,7 @@ nav
                                 {                                
                                     font-style: normal;
                                     font-weight: 300;
-                                    font-size: 16px;
+                                    font-size: 12px;
                                     line-height: 19px;
 
                                     color: @branco;
@@ -1499,7 +1563,7 @@ nav
                                 {
                                     font-style: normal;
                                     font-weight: 500;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                 
                                     color: #A950D4;
                                 }
@@ -1598,8 +1662,6 @@ nav
 
     background: #310F40;
 
-    margin-top: 150px;
-
     position: relative;
     z-index: 1;
 
@@ -1609,7 +1671,7 @@ nav
         justify-content: space-between;
         align-items: center;
 
-        width: 70%;
+        width: 80%;
         height: 145px;
 
         .footer-menu
@@ -1656,7 +1718,9 @@ nav
             justify-content: space-between;
             align-items: center;
 
-            width: 9%;
+            width: 130px;
+
+            margin-right: 90px;
 
             a
             {
