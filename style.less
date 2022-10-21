@@ -411,11 +411,87 @@ nav
                     width: 470px;
                     margin-right: 100px;
 
+                    position: relative;
+
                     z-index: 1;
 
                     img
                     {
                         width: 100%;
+                    }
+
+                    .play-ilustration-cont
+                    {
+                        position: absolute;
+                        top: 280px;
+
+                        width: 200px;
+                        height: 200px;
+
+                        .play-ilustration
+                        {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            border: solid 1px;
+                            
+                            width: 190px;
+                            height: 133px;
+
+                            position: relative;
+
+                            .box-play
+                            {
+                                width: 10px;
+                                height: 10px;
+
+                                background: #ffffff;
+
+                                position: absolute;
+
+                                &:nth-child(1)
+                                {
+                                    top: -5px;
+                                    left: -5px;
+                                }
+
+                                &:nth-child(2)
+                                {
+                                    top: -5px;
+                                    right: -5px;
+                                }
+
+                                &:nth-child(3)
+                                {
+                                    bottom: -5px;
+                                    left: -5px;
+                                }
+
+                                &:nth-child(4)
+                                {
+                                    bottom: -5px;
+                                    right: -5px;
+                                }
+                            }
+
+                            .play-ilustration-box
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                width: 180px;
+                                height: 120px;
+
+                                background: @azul;
+
+                                svg
+                                {
+                                    width: 30px;
+                                }
+                            }
+                        }   
                     }
                 }
 
