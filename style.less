@@ -5,6 +5,11 @@
 @texto:#ECD4FF;
 @branco: #ffffff;
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     margin: 0;
@@ -59,6 +64,11 @@ nav
                     align-items: center;
 
                     width: 200px;
+
+                    &:active
+                    {
+                        transform: translateY(2px);
+                    }
 
                     .logo-box
                     {
@@ -156,6 +166,11 @@ nav
                 .setor a
                 {
                     text-decoration: none;
+
+                    &:active
+                    {
+                        transform: translateY(2px);
+                    }
 
                     p
                     {
@@ -353,6 +368,11 @@ nav
                         &:hover
                         {
                             width: 220px;
+                        }
+
+                        &:active
+                        {
+                            transform: translateY(3px);
                         }
 
                         a
@@ -1579,6 +1599,8 @@ nav
 
                     z-index: 1;
 
+                    cursor: pointer;
+
                     &:nth-child(1)
                     {
                         top: 10px;
@@ -1913,7 +1935,7 @@ nav
     gap: 10px;
 
     position: fixed;
-    bottom: 50px;
+    bottom: 75px;
     right: 50px;
 
     z-index: 99;
@@ -1957,38 +1979,42 @@ nav
 /* /Voltar ao topo */
 
 /* Footer */
-.footer-row
+footer
 {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
     height: 145px;
 
-    background: #310F40;
+    padding: 0px 20px 30px 20px;
 
-    position: relative;
-    z-index: 1;
-
-    .footer
+    .footer-row
     {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
 
-        width: 80%;
+        width: 98%;
         height: 145px;
 
-        .footer-menu
+        background: #310F40;
+        box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.3);
+        border-radius: 30px;
+
+        position: relative;
+        z-index: 1;
+
+        .footer
         {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            width: 60%;
+            width: 80%;
+            height: 145px;
 
-            .footer-categorias
+            .footer-menu
             {
                 display: flex;
                 justify-content: space-between;
@@ -1996,68 +2022,77 @@ nav
 
                 width: 60%;
 
-                .setor a
+                .footer-categorias
                 {
-                    text-decoration: none;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
 
-                    p
+                    width: 60%;
+
+                    .setor a
                     {
-                        font-style: normal;
-                        font-weight: 400;
-                        font-size: 20px;
-                        line-height: 24px;
-                        text-align: center;
-        
-                        color: @texto;
-        
-                        position: relative;
-        
-                        width: 150px;
+                        text-decoration: none;
+
+                        p
+                        {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 24px;
+                            text-align: center;
+            
+                            color: @texto;
+            
+                            position: relative;
+            
+                            width: 150px;
+                        }
                     }
                 }
             }
-        }
 
-        .redes-contato
-        {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            width: 130px;
-
-            margin-right: 90px;
-
-            a
+            .redes-contato
             {
-                .icon-social
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    
-                    width: 35px;
-                    height: 35px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
 
-                    border: 1px solid #ffffff20;
-                    border-radius: 50px;
+                width: 130px;
 
-                    transition: .2s;
-                }
+                margin-right: 90px;
 
-                &:hover
+                a
                 {
                     .icon-social
                     {
-                        border: 1px solid @azul;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        width: 35px;
+                        height: 35px;
+
+                        border: 1px solid #ffffff20;
+                        border-radius: 50px;
+
+                        transition: .2s;
                     }
-                }
 
-                &:last-child
-                {
-                    .icon-social
+                    &:hover
                     {
-                        border: 1px solid @azul;
+                        .icon-social
+                        {
+                            border: 1px solid @azul;
+                        }
+                    }
+
+                    &:last-child
+                    {
+                        .icon-social
+                        {
+                            border: 1px solid @azul;
+                        }
                     }
                 }
             }
@@ -2066,61 +2101,331 @@ nav
 }
 /* /Footer */
 
-.mouse-anomation
+/* PopUps */
+#PopupQualidoc, #PopupYouexp, #PopupOnofre, #PopupCG, #PopupOnvip
 {
-    position: fixed;
-    bottom: 30px;
+    display: none;
+}
 
+.popup-cont
+{
     display: flex;
     justify-content: center;
+    align-items: center;
 
     width: 100%;
+    height: 100vh;
 
-    .icon-scroll
+    background: #00000090;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    z-index: 9;
+
+    #profile
     {
-        width: 31px;
-        height: 50px;
+        transition: .2S;
+    }
 
-        border: 1px solid @branco;
-        border-radius: 25px;
+    .profile
+    {
 
-        position: relative;
+       .curriculo
+       {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-        &::after
-        {
-            content: '';
+            gap: 20px;
 
-            position: absolute;
-            top: 10px;
-            left: 14px;
+            position: relative;
 
-            width: 3px;
-            height: 3px;
+            .closePopup
+            {                
+                width: 30px;
+                height: 30px;
 
-            background: @branco;
+                position: absolute;
+                top: 20px;
+                right: -50px;
 
-            border-radius: 10px;
+                cursor: pointer;
 
-            animation: scroll 1s infinite;
+                background: none;
 
-            @keyframes scroll 
-            {
-                0%
+                svg
                 {
-                    opacity: 1;
-                }
+                    width: 30px;
+                    height: 30px;
 
-                10%
-                {
-                    height: 20px;
-                }
+                    transition-property: all;
+                    transition-duration: 0.3s;
+                    transition-timing-function: cubic-bezier(0.42, 0.01, 0.05, 1.15);
+                    transition-delay: 0s;
 
-                100%
-                {
-                    opacity: 0;
-                    top: 40px;
+                    &:hover
+                    {
+                        transform: scale(1.5);
+                    }
                 }
             }
-        }
+
+            .infos-empresa-cont
+            {
+                background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+
+                padding: 2px;
+
+                border-radius: 30px;
+
+                .infos-empresa
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                    background: #2C153C;
+
+                    gap: 20px;
+
+                    width: 520px;
+                    height: 634px;
+
+                    border-radius: 30px;
+
+                    overflow: hidden;
+
+                    .nome-empresa-popup
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+
+                        width: 492px;
+                        height: 226px;                        
+
+                        border-radius: 15px;
+
+                        margin-top: 15px;
+
+                        img
+                        {
+                            width: 130px;
+
+                            margin-left: 30px;
+
+                            z-index: 3;
+                        }
+
+                        span
+                        {
+                            margin: 0;
+                            
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 20px;
+                            line-height: 24px;
+
+                            color: #FFFFFF;
+
+                            margin-left: 30px;
+
+                            width: 234px;
+
+                            z-index: 1;
+                        }
+
+                        iframe
+                        {
+                            position: absolute;
+                            width: 495px;
+                            height: 230px;
+                        }
+                    }
+
+                    .qualidoc-bg
+                    {
+                        background: #197FDB url(capa-popup-qualidoc.png) center center no-repeat !important;
+                        background-size: cover;
+                    }
+
+                    .youexp-bg
+                    {
+                        background: #197FDB url(img-banner-home-youexp.jpeg) center center no-repeat !important;
+                        background-size: cover;
+
+                        position: relative;
+
+                        overflow: hidden;
+
+                        span
+                        {
+
+                            &::before
+                            {
+                                content: '';
+
+                                width: 100%;
+                                height: 95px;
+                                
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+
+                                background: #ffffff99;
+                            }
+                        }
+                    }
+
+                    .onofre-bg
+                    {
+                        background: #197FDB url(capa-onofre-agora.png) center center no-repeat !important;
+                        background-size: cover;
+                    }
+
+                    .CG-bg
+                    {
+                        background: #197FDB url(capa-cg.png) center center no-repeat !important;
+                        background-size: cover;
+                        
+                        img
+                        {
+                            width: 60px;
+                        }
+                    }
+
+                    .Onvip-bg
+                    {
+                        img
+                        {
+                            width: 40px;
+                        }
+                    }
+
+                    ul
+                    {
+                        width: 90%;
+
+                        margin-left: -20px;
+
+                        li
+                        {
+                            margin-bottom: 15px;
+
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+        
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+
+            .softwares-usados-cont
+            {
+                background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+
+                padding: 1px;
+
+                border-radius: 20px;
+
+                .softwares-usados
+                {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 25px;
+
+                    width: 74px;
+                    height: 634px;
+
+                    background: linear-gradient(0deg, rgba(148, 36, 201, 0.1), rgba(148, 36, 201, 0.1)), linear-gradient(0deg, #21132C, #21132C), #FFFFFF;
+                    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.7);
+                    border-radius: 20px;
+
+                    .logo-dominio
+                    {
+                        background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+
+                        padding: 1px;
+
+                        border-radius: 50px;
+
+                        z-index: 1;
+
+                        &:first-child
+                        {
+                            margin-top: 20px;
+                        }
+
+                        .logo-dominio-bg
+                        {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 26px;
+                            height: 26px;
+                            
+                            border-radius: 50px;
+
+                            span
+                            {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 12px;
+                                line-height: 36px;
+                                text-align: center;
+
+                                color: #FFFFFF;
+                            }
+
+                            img
+                            {
+                                width: 40%;
+                            }
+                        }
+
+                        .FHCJ
+                        {
+                            background: #1E1E1E;
+                        }
+
+                        .UX
+                        {
+                            background: #9424C9;
+                        }
+
+                        .UI
+                        {
+                            background: #1ABBC9;
+                        }
+
+                        .blender
+                        {
+                            background: #E87D0D;
+                        }
+
+                        .AI
+                        {
+                            background: #330000;
+                        }
+
+                        .PS
+                        {
+                            background: #001E36;
+                        }
+
+                        .AE, .PR
+                        {
+                            background: #00005B;
+                        }
+                    }
+                }
+            }
+        }    
     }
 }
