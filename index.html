@@ -11,6 +11,8 @@
 
     <link rel="stylesheet/less" type="text/css" href="style.less" />
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 
     <script type="text/javascript">
@@ -47,7 +49,7 @@
     
                 <div class="menu">
                     <div class="setor">
-                        <a href="#">
+                        <a href="#curriculo">
                             <p>Currículo</p>
                         </a>
                     </div>
@@ -940,7 +942,7 @@
                 </div>
             </div>
 
-            <div class="reguas-inputs">
+            <div class="reguas-inputs" id="curriculo">
                 <div class="inputs-display">
                     <div class="botao-regua">
                         <input type="radio" id="regua1" name="regua" onclick="regua();" checked>
@@ -1000,7 +1002,7 @@
 
                 <div class="experiencias-certificados">
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1034,7 +1036,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="YouExp()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1068,7 +1070,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="Onofre()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1102,7 +1104,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="Onofre()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1136,7 +1138,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="CGFreela()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1170,7 +1172,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="Onvip()">
                         <div class="experiencia-stroke">
                             <div class="identificador azul">
                                 <hr>
@@ -1204,7 +1206,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1230,7 +1232,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1256,7 +1258,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1282,7 +1284,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1308,7 +1310,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1334,7 +1336,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1360,7 +1362,7 @@
                         </div>
                     </a>
 
-                    <a href="#">
+                    <a onclick="qualidoc()">
                         <div class="experiencia-stroke">
                             <div class="identificador roxo">
                                 <hr>
@@ -1393,52 +1395,457 @@
     <!-- /Linha do tempo -->
 
     <!-- Footer -->
-    <div class="footer-row">
-        <div class="footer">
-            <div class="footer-menu">                
-                <div class="logo">
-                    <img src="logo-CG.svg" alt="">
+    <footer>
+        <div class="footer-row">
+            <div class="footer">
+                <div class="footer-menu">                
+                    <div class="logo">
+                        <img src="logo-CG.svg" alt="">
+                    </div>
+    
+                    <div class="footer-categorias">
+                        <div class="setor">
+                            <a href="#">
+                                <p>Currículo</p>
+                            </a>
+                        </div>
+                        <div class="setor">
+                            <a href="#">
+                                <p>Testemunhas</p>
+                            </a>
+                        </div>
+                        <div class="setor">
+                            <a href="#">
+                                <p>Galeria</p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="footer-categorias">
-                    <div class="setor">
-                        <a href="#">
-                            <p>Currículo</p>
-                        </a>
-                    </div>
-                    <div class="setor">
-                        <a href="#">
-                            <p>Testemunhas</p>
-                        </a>
-                    </div>
-                    <div class="setor">
-                        <a href="#">
-                            <p>Galeria</p>
-                        </a>
-                    </div>
+    
+                <div class="redes-contato">
+                    <a href="#">
+                        <div class="icon-social">
+                            <img src="linkedin.svg">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon-social">
+                            <img src="instagram.svg">
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="icon-social">
+                            <img src="email.svg">
+                        </div>
+                    </a>
                 </div>
             </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
 
-            <div class="redes-contato">
-                <a href="#">
-                    <div class="icon-social">
-                        <img src="linkedin.svg">
+    <!-- PopUps -->
+    <div class="popup-cont" id="PopupQualidoc" onclick="fecharQualidoc()">
+        <div class="profile" id="profile">
+            <div class="curriculo">
+                <div onclick="fechar()" class="closePopup">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10L10 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
+
+                <div class="infos-empresa-cont">
+                    <div class="infos-empresa">
+                        <div class="nome-empresa-popup qualidoc-bg">
+                            <img src="qualidoc-header-logo-original.svg">
+                            <span>Coordenador<br>de criação</span>
+                        </div>
+        
+                        <ul>
+                            <li>Manage, mentor and inspire a team of design managers, product designers, researchers and writers providing design direction and pushing high the quality of the design work.</li>
+                            <li>Establish and promote a healthy team culture that works hand in hand with cross-functional partners and design teams in other Qualidoc offices.</li>
+                            <li>Support our growth in hiring and coach new team members.</li>
+                            <li>Push the boundaries of your team’s execution and help Qualidoc challenge the status quo.</li>
+                        </ul>
                     </div>
-                </a>
-                <a href="#">
-                    <div class="icon-social">
-                        <img src="instagram.svg">
+                </div>
+
+                <div class="softwares-usados-cont">
+                    <div class="softwares-usados">
+
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="figma-logo.svg" alt="figma">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UX">
+                                <span>UX</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UI">
+                                <span>UI</span>     
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg blender">
+                                <img src="blender.svg" alt="Blender">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AI">
+                                <span>AI</span>
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AE">
+                                <span>AE</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PS">
+                                <span>PS</span> 
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PR">
+                                <span>PR</span>
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="html.svg" alt="HTML">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="CSS.svg" alt="CSS">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="javascript.svg" alt="JS">
+                            </div>                        
+                        </div>
                     </div>
-                </a>
-                <a href="#">
-                    <div class="icon-social">
-                        <img src="email.svg">
-                    </div>
-                </a>
+                </div>
             </div>
         </div>
     </div>
-    <!-- /Footer -->
+
+    <div class="popup-cont" id="PopupYouexp" onclick="fecharYouExp()">
+        <div class="profile" id="profile">
+            <div class="curriculo">
+                <div onclick="fecharYouExp()" class="closePopup">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10L10 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
+
+                <div class="infos-empresa-cont">
+                    <div class="infos-empresa">
+                        <div class="nome-empresa-popup youexp-bg">
+                            <img src="logo-youexp.png">
+                            <span>Designer de Produto Digital - Motion design</span>
+                        </div>
+        
+                        <ul>
+                            <li>Manage, mentor and inspire a team of design managers, product designers, researchers and writers providing design direction and pushing high the quality of the design work.</li>
+                            <li>Establish and promote a healthy team culture that works hand in hand with cross-functional partners and design teams in other Qualidoc offices.</li>
+                            <li>Support our growth in hiring and coach new team members.</li>
+                            <li>Push the boundaries of your team’s execution and help Qualidoc challenge the status quo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="softwares-usados-cont">
+                    <div class="softwares-usados">
+                        
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AI">
+                                <span>AI</span>
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AE">
+                                <span>AE</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PS">
+                                <span>PS</span> 
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PR">
+                                <span>PR</span>
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="html.svg" alt="HTML">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="CSS.svg" alt="CSS">
+                            </div>                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-cont" id="PopupOnofre" onclick="fecharOnofre()">
+        <div class="profile" id="profile">
+            <div class="curriculo">
+                <div onclick="fecharOnofre()" class="closePopup">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10L10 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
+
+                <div class="infos-empresa-cont">
+                    <div class="infos-empresa">
+                        <div class="nome-empresa-popup onofre-bg">
+                            <img src="logo-onofre-eletro-popup.svg">
+                            <span>Web Designer - UX</span>
+                        </div>
+        
+                        <ul>
+                            <li>Manage, mentor and inspire a team of design managers, product designers, researchers and writers providing design direction and pushing high the quality of the design work.</li>
+                            <li>Establish and promote a healthy team culture that works hand in hand with cross-functional partners and design teams in other Qualidoc offices.</li>
+                            <li>Support our growth in hiring and coach new team members.</li>
+                            <li>Push the boundaries of your team’s execution and help Qualidoc challenge the status quo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="softwares-usados-cont">
+                    <div class="softwares-usados">
+                        
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="figma-logo.svg" alt="figma">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UX">
+                                <span>UX</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UI">
+                                <span>UI</span>     
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg blender">
+                                <img src="blender.svg" alt="Blender">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AE">
+                                <span>AE</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PS">
+                                <span>PS</span> 
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="html.svg" alt="HTML">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="CSS.svg" alt="CSS">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="javascript.svg" alt="JS">
+                            </div>                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-cont" id="PopupCG" onclick="fecharCG()">
+        <div class="profile" id="profile">
+            <div class="curriculo">
+                <div onclick="fecharCG()" class="closePopup">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10L10 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
+
+                <div class="infos-empresa-cont">
+                    <div class="infos-empresa">
+                        <div class="nome-empresa-popup CG-bg">
+                            <img src="logo-CG.svg">
+                            <span>Web Designer - UX</span>
+                        </div>
+        
+                        <ul>
+                            <li>Manage, mentor and inspire a team of design managers, product designers, researchers and writers providing design direction and pushing high the quality of the design work.</li>
+                            <li>Establish and promote a healthy team culture that works hand in hand with cross-functional partners and design teams in other Qualidoc offices.</li>
+                            <li>Support our growth in hiring and coach new team members.</li>
+                            <li>Push the boundaries of your team’s execution and help Qualidoc challenge the status quo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="softwares-usados-cont">
+                    <div class="softwares-usados">
+                        
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="figma-logo.svg" alt="figma">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UX">
+                                <span>UX</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UI">
+                                <span>UI</span>     
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg blender">
+                                <img src="blender.svg" alt="Blender">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AE">
+                                <span>AE</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PS">
+                                <span>PS</span> 
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="html.svg" alt="HTML">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="CSS.svg" alt="CSS">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="javascript.svg" alt="JS">
+                            </div>                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup-cont" id="PopupOnvip" onclick="fecharOnvip()">
+        <div class="profile" id="profile">
+            <div class="curriculo">
+                <div onclick="fecharOnvip()" class="closePopup">
+                    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 10L10 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10 10L20 20" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </div>
+
+                <div class="infos-empresa-cont">
+                    <div class="infos-empresa">
+                        <div class="nome-empresa-popup Onvip-bg">
+                            <img src="onvip.png">
+                            <span>Web Designer - UX</span>
+
+                            <iframe src="https://www.youtube.com/embed/PNb1Ae2sF2c?controls=0?autoplay=1&mute=1;" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+        
+                        <ul>
+                            <li>Manage, mentor and inspire a team of design managers, product designers, researchers and writers providing design direction and pushing high the quality of the design work.</li>
+                            <li>Establish and promote a healthy team culture that works hand in hand with cross-functional partners and design teams in other Qualidoc offices.</li>
+                            <li>Support our growth in hiring and coach new team members.</li>
+                            <li>Push the boundaries of your team’s execution and help Qualidoc challenge the status quo.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="softwares-usados-cont">
+                    <div class="softwares-usados">
+                        
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="figma-logo.svg" alt="figma">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UX">
+                                <span>UX</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg UI">
+                                <span>UI</span>     
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg blender">
+                                <img src="blender.svg" alt="Blender">    
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg AE">
+                                <span>AE</span>   
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg PS">
+                                <span>PS</span> 
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="html.svg" alt="HTML">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="CSS.svg" alt="CSS">
+                            </div>                        
+                        </div>
+                        <div class="logo-dominio">
+                            <div class="logo-dominio-bg FHCJ">
+                                <img src="javascript.svg" alt="JS">
+                            </div>                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /PopUps -->
 
     <!-- Baixar currículo -->
     <button onclick="topFunction()" id="BaixarCV" title="Go to top">
@@ -1448,6 +1855,17 @@
         <span>Baixar Currículo</span>
     </button>
     <!-- /Baixar currículo -->
+
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            uration: 2500,
+            delay: 400,
+        });
+
+        ScrollReveal().reveal('.dots-primeiro, .dots-segundo, .dots-terceiro, .dots-quarto', {delay: 100, origin: 'bottom', interval: 100 });
+    </script>
   
     <script src="script.js"></script>
     <!-- Less -->
