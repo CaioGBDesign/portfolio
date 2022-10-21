@@ -129,3 +129,68 @@ function scrollFunction() {
     BTNDownload.style.opacity = "0";
   }
 }
+
+//PopUp qualidoc
+function qualidoc()
+{
+  var qualidoc = document.getElementById("PopupQualidoc");
+  qualidoc.style.display="flex";
+}
+
+function fecharQualidoc()
+{
+  var fecharQualidoc = document.getElementById("PopupQualidoc");
+  fecharQualidoc.style.display="none";
+}
+
+//PopUp YouExp
+function YouExp()
+{
+  var YouExp = document.getElementById("PopupYouexp");
+  YouExp.style.display="flex";
+}
+
+function fecharYouExp()
+{
+  var fecharYouExp = document.getElementById("PopupYouexp");
+  fecharYouExp.style.display="none";
+}
+
+//PopUp Onofre
+function Onofre()
+{
+  var Onofre = document.getElementById("PopupOnofre");
+  Onofre.style.display="flex";
+}
+
+function fecharOnofre()
+{
+  var fecharOnofre = document.getElementById("PopupOnofre");
+  fecharOnofre.style.display="none";
+}
+
+//PopUp CG
+function CGFreela()
+{
+  var CGFreela = document.getElementById("PopupCG");
+  CGFreela.style.display="flex";
+}
+
+function fecharCG()
+{
+  var fecharCG = document.getElementById("PopupCG");
+  fecharCG.style.display="none";
+}
+
+//PopUp Onvip
+function Onvip()
+{
+  var Onvip = document.getElementById("PopupOnvip");
+  Onvip.style.display="flex";
+}
+
+function fecharOnvip()
+{
+  var fecharOnvip = document.getElementById("PopupOnvip");
+  fecharOnvip.style.display="none";
+}
