@@ -213,9 +213,10 @@ nav
 
 .PF-Container
 {
-    //scroll-snap-type: y mandatory;
-    //overflow-y: scroll;
-    //height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 100vh;
     
     section
     {
@@ -224,7 +225,8 @@ nav
         justify-content: center;
         align-items: center;
         color: white;
-        //scroll-snap-align: start;
+        scroll-snap-align: start;
+        scroll-behavior: smooth;
 
         &:first-child
         {
@@ -234,6 +236,12 @@ nav
             flex-direction: column;
 
             position: relative;
+        }
+
+        &:last-child
+        {
+            width: 100%;
+            height: auto;
         }
         
         /* Banners e informações */
@@ -282,6 +290,59 @@ nav
                             align-items: center;
                         
                             height: 130px;
+
+                            overflow: hidden;
+                            position: relative;
+
+                            .titulo-motion
+                            {
+                                position: absolute;
+
+                                animation: titulo 4s ease-in-out infinite;
+
+                                @keyframes titulo
+                                {
+                                    0%
+                                    {
+                                        top: 0px;
+                                    }
+
+                                    20%
+                                    {
+                                        top: 0px;
+                                    }
+
+                                    25%
+                                    {
+                                        top: -130px;
+                                    }
+
+                                    55%
+                                    {
+                                        top: -130px;
+                                    }
+
+                                    60%
+                                    {
+                                        top: -250px;
+                                    }
+
+                                    90%
+                                    {
+                                        top: -250px;
+                                    }
+
+                                    95%
+                                    {
+                                        top: -368px;
+                                    }
+
+                                    100%
+                                    {
+                                        top: -368px;
+                                    }
+                                }
+                            }
 
                             h2
                             {
@@ -339,7 +400,7 @@ nav
                             display: flex;
                             align-items: center;
                         
-                            width: 286px;
+                            width: 315px;
                             height: 50px;
                         
                             p
@@ -409,6 +470,8 @@ nav
                 .Carrossel-projetos
                 {
                     width: 470px;
+                    height: 340px;
+
                     margin-right: 100px;
 
                     position: relative;
@@ -428,25 +491,102 @@ nav
                         width: 200px;
                         height: 200px;
 
+                        .pen
+                        {
+                            position: absolute;
+
+                            top: 90px;
+                            left: 150px;
+
+                            z-index: 1;
+
+                            width: 40px;
+
+                            //animation: pen 2s ease-in-out infinite alternate;
+
+                            @keyframes pen 
+                            {
+                                0%
+                                {
+                                    top: 0px;
+                                    left: 0px;
+                                }
+
+                                25%
+                                {
+                                    top: 0px;
+                                    left: 0px;
+                                }
+
+                                75%
+                                {
+                                    top: 90px;
+                                    left: 150px;
+                                }
+
+                                100%
+                                {
+                                    top: 90px;
+                                    left: 150px;
+                                }
+                            }
+
+                            img
+                            {
+                                width: 100%;
+                            }
+                        }
+
                         .play-ilustration
                         {
                             display: flex;
                             justify-content: center;
                             align-items: center;
 
-                            border: solid 1px;
-                            
-                            width: 190px;
-                            height: 133px;
+                            border: solid 1px #ffffff70;
 
                             position: relative;
+
+                            width: 150px;
+                            height: 90px;
+
+                            //animation: play 2s ease-in-out infinite alternate;
+
+                            @keyframes play 
+                            {
+                                0%
+                                {
+                                    width: 0px;
+                                    height: 0px;
+                                }
+
+                                25%
+                                {
+                                    width: 0px;
+                                    height: 0px;
+                                }
+
+                                75%
+                                {
+                                    width: 150px;
+                                    height: 93px;
+                                }
+
+                                100%
+                                {
+                                    width: 150px;
+                                    height: 93px;
+                                }
+                            }
 
                             .box-play
                             {
                                 width: 10px;
                                 height: 10px;
 
-                                background: #ffffff;
+                                background: @fundo;
+
+                                border: solid 1px;
 
                                 position: absolute;
 
@@ -472,6 +612,8 @@ nav
                                 {
                                     bottom: -5px;
                                     right: -5px;
+
+                                    background: #ffffff70;
                                 }
                             }
 
@@ -481,14 +623,70 @@ nav
                                 justify-content: center;
                                 align-items: center;
 
-                                width: 180px;
-                                height: 120px;
+                                width: 136px;
+                                height: 77px;
 
                                 background: @azul;
+
+                                overflow: hidden;
+
+                                //animation: play-box 2s ease-in-out infinite alternate;
+    
+                                @keyframes play-box
+                                {
+                                    0%
+                                    {
+                                        width: 0px;
+                                        height: 0px;
+                                    }
+
+                                    25%
+                                    {
+                                        width: 0px;
+                                        height: 0px;
+                                    }
+    
+                                    75%
+                                    {
+                                        width: 136px;
+                                        height: 77px;
+                                    }
+    
+                                    100%
+                                    {
+                                        width: 136px;
+                                        height: 77px;
+                                    }
+                                }
 
                                 svg
                                 {
                                     width: 30px;
+
+                                    //animation: play-icon 2s ease-in-out infinite alternate;
+        
+                                    @keyframes play-icon
+                                    {
+                                        0%
+                                        {
+                                            width: 0px;
+                                        }
+
+                                        25%
+                                        {
+                                            width: 0px;
+                                        }
+        
+                                        75%
+                                        {
+                                            width: 30px;
+                                        }
+        
+                                        100%
+                                        {
+                                            width: 30px;
+                                        }
+                                    }
                                 }
                             }
                         }   
@@ -839,6 +1037,129 @@ nav
                                     }
                                 }
 
+                                .ferramentas-photoshop
+                                {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    gap: 20px;
+
+                                    width: 230px;
+                                    height: 120px;
+
+                                    background: #ffffff99;
+                                    border-radius: 35px;
+                                    border: solid 2px;
+                                    
+                                    position: absolute;
+                                    left: 100px;
+                                    bottom: 90px;
+
+                                    z-index: 2;
+
+                                    overflow: hidden;
+                                    
+                                    .bg-figure
+                                    {
+                                        position: absolute;
+                                        left: 0px;
+                                        top: 0px;
+
+                                        width: 210px;
+                                        height: 120px;
+                                        
+                                        border-radius: 35px;
+
+                                        background: rgba(255, 255, 255, 0.1);
+                                        box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.15);
+                                        backdrop-filter: blur(5px);
+                                    }
+
+                                    span
+                                    {
+                                        color: @fundo;
+
+                                        font-weight: bold;
+
+                                        margin: 0px;
+
+                                        z-index: 1;
+                                    }
+                                    
+                                    .ferramentas-photoshop-box
+                                    {
+                                        
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        width: 210px;
+
+                                        .logo-dominio
+                                        {
+                                            background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+    
+                                            padding: 1px;
+    
+                                            border-radius: 50px;
+    
+                                            z-index: 1;
+    
+                                            margin-left: -15px;
+    
+                                            &:first-child
+                                            {
+                                                margin: 0px;
+                                            }
+    
+                                            .logo-dominio-bg
+                                            {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+    
+                                                width: 50px;
+                                                height: 50px;
+                                                
+                                                border-radius: 50px;
+    
+                                                span
+                                                {
+                                                    font-style: normal;
+                                                    font-weight: 700;
+                                                    font-size: 18px;
+                                                    line-height: 36px;
+                                                    text-align: center;
+    
+                                                    color: #FFFFFF;
+                                                }
+    
+                                                img
+                                                {
+                                                    width: 40%;
+                                                }
+                                            }
+    
+                                            .FHCJ
+                                            {
+                                                background: #1E1E1E;
+                                            }
+    
+                                            .blender
+                                            {
+                                                background: #E87D0D;
+                                            }
+    
+                                            .PS
+                                            {
+                                                background: #001E36;
+                                            }
+                                        }
+                                    }                                    
+                                }
+
                                 .PS-projetos-mosaico
                                 {
                                     width: 100%;
@@ -847,8 +1168,8 @@ nav
 
                                     img
                                     {
-                                        border: solid @branco 1px;
-                                        border-radius: 15px;
+                                        border: solid @branco 2px;
+                                        border-radius: 35px;
 
                                         position: absolute;
 
@@ -863,18 +1184,6 @@ nav
                                             top: 60px;
                                             right: 150px;
                                             z-index: 1;
-                                        }
-
-                                        &:nth-child(3)
-                                        {
-                                            top: 195px;
-                                            left: 70px;
-                                        }
-
-                                        &:nth-child(4)
-                                        {
-                                            bottom: 0px;
-                                            right: 130px;
                                         }
                                     }
                                 }
@@ -955,7 +1264,7 @@ nav
                                                     box-shadow: 0px 0px 25px rgba(26, 187, 201, 0.8);
                                                     left: 15%;
                                                     transform-origin: 50%;
-                                                    animation: circle .5s alternate infinite ease;
+                                                    //animation: circle .5s alternate infinite ease;
 
                                                     @keyframes circle
                                                     {
@@ -983,14 +1292,14 @@ nav
                                                     &:nth-child(2)
                                                     {
                                                         left: 45%;
-                                                        animation-delay: .2s;
+                                                        //animation-delay: .2s;
                                                     }
 
                                                     &:nth-child(3)
                                                     {
                                                         left: auto;
                                                         right: 15%;
-                                                        animation-delay: .3s;
+                                                        //animation-delay: .3s;
                                                     }
                                                 }
 
@@ -1006,7 +1315,7 @@ nav
                                                     z-index: -1;
                                                     left: 15%;
                                                     filter: blur(1px);
-                                                    animation: shadow .5s alternate infinite ease;
+                                                    //animation: shadow .5s alternate infinite ease;
 
                                                     @keyframes shadow
                                                     {
@@ -1031,14 +1340,14 @@ nav
                                                     &:nth-child(4)
                                                     {
                                                         left: 45%;
-                                                        animation-delay: .2s;
+                                                        //animation-delay: .2s;
                                                     }
 
                                                     &:nth-child(5)
                                                     {
                                                         left: auto;
                                                         right: 15%;
-                                                        animation-delay: .3s;
+                                                        //animation-delay: .3s;
                                                     }
                                                 }
                                             }
@@ -1482,525 +1791,990 @@ nav
                 }
             }
         }
-        /* /Slider */
-    }
-}
+        /* /Slider */        
 
-/* Linha do tempo */
-.Linha-tempo-Row
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 1370px;
-
-    .Linha-tempo
-    {
-        width: 1200px;
-        height: 1370px;
-
-        position: relative;
-
-        .datas-cont
+        /* Linha do tempo */
+        .Linha-tempo-Row
         {
             display: flex;
             justify-content: center;
+            align-items: center;
 
             width: 100%;
+            height: 100vh;
 
-            position: relative;
-
-            .datas
+            .Linha-tempo
             {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                width: 1200px;
+                height: 100vh;
 
-                width: 100%;
-                height: 150px;
+                position: relative;
 
-                position: absolute;
-                top: 0px;
-                left: 0px;
-
-                span
+                .datas-cont
                 {
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 18px;
-                    line-height: 22px;
+                    display: flex;
+                    justify-content: center;
 
-                    text-align: center;
-
-                    color: @texto;
+                    width: 100%;
 
                     position: relative;
 
-                    opacity: 0.3;
-
-                    &::after
-                    {
-                        content: '';
-
-                        position: absolute;
-                        top: 100px;
-                        left: 20px;
-
-                        width: 1px;
-                        height: 1210px;
-
-                        background: @branco;
-
-                        opacity: .2;
-                    }
-                }
-            }
-        }
-
-        .reguas-inputs
-        {
-            display: flex;
-            justify-content: center;
-
-            width: 100%;
-            height: 1360px;
-
-            position: relative;
-
-            .inputs-display
-            {
-                display: flex;
-                justify-content: space-between;
-
-                width: 97.2%;
-
-                .botao-regua
-                {
-                    width: 20.2%;
-                    height: 150px;
-
-                    input
-                    {
-                        opacity: 0;
-                    }
-
-                    label
-                    {
-
-                        div
-                        {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-
-                            width: 100%;
-                            height: 135px;
-
-                            #marcador-regua2, #marcador-regua3, #marcador-regua4, #marcador-regua5
-                            {
-                                opacity: 0;
-                            }
-
-                            .marcador-regua
-                            {
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-
-                                width: 30px;
-                                height: 30px;
-
-                                background: @azul;
-
-                                border-radius: 30px;
-                                box-shadow: 0px 0px 25px rgba(26, 187, 201, 0.8);
-                                
-                                position: relative;
-
-                                transition: .2s;
-
-                                &::after
-                                {
-                                    content: '';
-
-                                    position: absolute;
-                                    top: 30px;
-                                    left: 15px;
-
-                                    width: 1px;
-                                    height: 1267px;
-
-                                    background: @azul;
-                                }
-
-                                &::before
-                                {
-                                    content: '';
-
-                                    position: absolute;
-
-                                    top: 90px;
-                                    left: -98px;
-
-                                    width: 235px;
-                                    height: 1210px;
-
-                                    background: #1ABBC9;
-
-                                    opacity: 0.2;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            .experiencias-certificados
-            {
-                width: 100%;
-                height: 1210px;
-
-                position: absolute;
-                top: 150px;
-                left: 0px;
-
-                a
-                {
-                    position: absolute;
-                    text-decoration: none;
-
-                    transition: .5s;
-
-                    z-index: 1;
-
-                    cursor: pointer;
-
-                    &:nth-child(1)
-                    {
-                        top: 10px;
-                        left: 1%;
-                    }
-
-                    &:nth-child(2)
-                    {
-                        top: 70px;
-                        left: 23%;
-                    }
-
-                    &:nth-child(3)
-                    {
-                        top: 280px;
-                        left: 23%;
-                    }
-
-                    &:nth-child(4)
-                    {
-                        top: 280px;
-                        left: 46%;
-                    }
-
-                    &:nth-child(5)
-                    {
-                        top: 80px;
-                        right: 15%;
-                    }
-
-                    &:nth-child(6)
-                    {
-                        top: 280px;
-                        right: 0%;
-                    }
-
-                    &:nth-child(7)
-                    {
-                        top: 490px;
-                        left: 6%;
-                    }
-
-                    &:nth-child(8)
-                    {
-                        top: 490px;
-                        left: 31%;
-                    }
-
-                    &:nth-child(9)
-                    {
-                        top: 660px;
-                        left: 20%;
-                    }
-
-                    &:nth-child(10)
-                    {
-                        top: 830px;
-                        left: 25%;
-                    }
-
-                    &:nth-child(11)
-                    {
-                        top: 660px;
-                        right: 22%;
-                    }
-
-                    &:nth-child(12)
-                    {
-                        top: 830px;
-                        right: 30%;
-                    }
-
-                    &:nth-child(13)
-                    {
-                        top: 830px;
-                        right: 0;
-                    }
-
-                    .experiencia-stroke
+                    .datas
                     {
                         display: flex;
-                        justify-content: center;
+                        justify-content: space-between;
                         align-items: center;
 
-                        padding: 1px;
+                        width: 100%;
+                        height: 150px;
 
-                        background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
-                        box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
 
-                        border-radius: 30px;
-
-                        position: relative;
-
-                        .identificador
+                        span
                         {
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 18px;
+                            line-height: 22px;
 
-                            height: 100%;
+                            text-align: center;
 
-                            position: absolute;
-                            left: 1px;
+                            color: @texto;
 
-                            z-index: 2;
+                            position: relative;
 
-                            hr
+                            opacity: 0.3;
+
+                            &::after
                             {
-                                width: 2px;
-                                height: 50%;                                
+                                content: '';
 
-                                border: none;
-                            }
-                        }
+                                position: absolute;
+                                top: 100px;
+                                left: 20px;
 
-                        .azul
-                        {
-                            hr
-                            {
-                                background: @azul;
-                                box-shadow: 0px 0px 10px rgb(26 187 201 / 80%);
-                            }
-                        }
-
-                        .roxo
-                        {
-                            hr
-                            {
-                                background: @roxo;
-                                box-shadow: 0px 0px 10px rgba(148, 36, 201, 0.8);
-                            }
-                        }
-
-                        .experiencia-box
-                        {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: space-around;
-                            
-                            width: 210px;
-
-                            background: #2C153C;
-
-                            border-radius: 30px;
-
-                            gap: 10px;
-
-                            padding: 20px;
-
-                            z-index: 1;
-
-                            .logo-empresa
-                            {
-                                display: flex;
-                                align-items: center;
-
-                                gap: 10px;
-
-                                img
-                                {
-                                    width: 15px;
-                                    height: 15px;
-                                }
-
-                                span
-                                {
-                                    font-style: normal;
-                                    font-weight: 700;
-                                    font-size: 12px;
-                                    line-height: 17px;
-
-                                    color: @branco;
-                                }
-                            }
-
-                            .marcacao
-                            {
-                                span
-                                {
-                                    color: @azul !important;
-                                    opacity: 1 !important;
-                                }
-                            }
-
-                            .periodo
-                            {
-                                display: flex;
-                                align-items: center;
-
-                                height: 17px;
-
-                                span
-                                {
-                                    font-style: normal;
-                                    font-weight: 300;
-                                    font-size: 12px;
-                                    line-height: 17px;
-
-                                    color: @branco;
-
-                                    opacity: .3;
-                                }
-                            }
-
-                            .cargo
-                            {
-                                display: flex;
-                                align-items: center;
-                                p
-                                {                                
-                                    font-style: normal;
-                                    font-weight: 300;
-                                    font-size: 12px;
-                                    line-height: 19px;
-
-                                    color: @branco;
-
-                                    margin: 0;
-                                }
-                            }
-
-                            hr
-                            {
-                                width: 190px;
-                                height: 1px;
+                                width: 1px;
+                                height: 1210px;
 
                                 background: @branco;
 
                                 opacity: .2;
+                            }
+                        }
+                    }
+                }
 
-                                margin: 0;
+                .reguas-inputs
+                {
+                    display: flex;
+                    justify-content: center;
+
+                    width: 100%;
+                    height: 1360px;
+
+                    position: relative;
+
+                    .inputs-display
+                    {
+                        display: flex;
+                        justify-content: space-between;
+
+                        width: 97.2%;
+
+                        .botao-regua
+                        {
+                            width: 20.2%;
+                            height: 150px;
+
+                            input
+                            {
+                                opacity: 0;
                             }
 
-                            .logo-instituicao
+                            label
                             {
-                                display: flex;
-                                align-items: center;
 
-                                gap: 10px;
-
-                                span
+                                div
                                 {
-                                    font-style: normal;
-                                    font-weight: 300;
-                                    font-size: 14px;
-                                    line-height: 17px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
 
-                                    color: @branco;
+                                    width: 100%;
+                                    height: 135px;
+
+                                    #marcador-regua2, #marcador-regua3, #marcador-regua4, #marcador-regua5
+                                    {
+                                        opacity: 0;
+                                    }
+
+                                    .marcador-regua
+                                    {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        width: 30px;
+                                        height: 30px;
+
+                                        background: @azul;
+
+                                        border-radius: 30px;
+                                        box-shadow: 0px 0px 25px rgba(26, 187, 201, 0.8);
+                                        
+                                        position: relative;
+
+                                        transition: .2s;
+
+                                        &::after
+                                        {
+                                            content: '';
+
+                                            position: absolute;
+                                            top: 30px;
+                                            left: 15px;
+
+                                            width: 1px;
+                                            height: 1330px;
+
+                                            background: @azul;
+                                        }
+
+                                        &::before
+                                        {
+                                            content: '';
+
+                                            position: absolute;
+
+                                            top: 90px;
+                                            left: -98px;
+
+                                            width: 235px;
+                                            height: 1290px;
+
+                                            background: #1ABBC9;
+
+                                            opacity: 0.2;
+                                        }
+                                    }
                                 }
-                            }
-
-                            .curso
-                            {
-                                display: flex;
-                                align-items: center;
-                                p
-                                {                                
-                                    font-style: normal;
-                                    font-weight: 300;
-                                    font-size: 16px;
-                                    line-height: 19px;
-
-                                    color: @branco;
-
-                                    margin: 0;
-                                }
-                            }
-
-                            /* CTA-Galeria */
-                            .CTA-Galeria
-                            {
-                                display: flex;
-                                flex-direction: row;
-                                justify-content: center;
-                                align-items: center;
-
-                                background: #9424C920;
-                                border-radius: 30px;
-                                
-                                width: 132px;
-                            
-                                transition: .2s;
-                                
-                                padding: 8px 0px;
-                                gap: 10px;
-                            
-                                text-decoration: none;
-                
-                                span
-                                {
-                                    font-style: normal;
-                                    font-weight: 500;
-                                    font-size: 12px;
-                                
-                                    color: #A950D4;
-                                }
-                            
-                                img
-                                {
-                                    width: 12px;
-                                    height: 7px;
-                                }
-                            }
-                            /* /CTA-Galeria */
-
-                            .icon
-                            {
-                                position: absolute;
-                                top: 25px;
-                                right: 25px;
                             }
                         }
                     }
 
-                    &:hover
+                    .experiencias
                     {
-                        transform: translateY(-25px);                    
+                        width: 100%;
+                        height: 1210px;
+
+                        position: absolute;
+                        top: 150px;
+                        left: 0px;
+
+                        a
+                        {
+                            position: absolute;
+                            text-decoration: none;
+
+                            transition: .5s;
+
+                            z-index: 1;
+
+                            cursor: pointer;
+
+                            &:nth-child(1)
+                            {
+                                top: 10px;
+                                left: 1%;
+                            }
+
+                            &:nth-child(2)
+                            {
+                                top: 70px;
+                                left: 23%;
+                            }
+
+                            &:nth-child(3)
+                            {
+                                top: 280px;
+                                left: 23%;
+                            }
+
+                            &:nth-child(4)
+                            {
+                                top: 280px;
+                                left: 46%;
+                            }
+
+                            &:nth-child(5)
+                            {
+                                top: 80px;
+                                right: 15%;
+                            }
+
+                            &:nth-child(6)
+                            {
+                                top: 280px;
+                                right: 0%;
+                            }
+
+                            &:nth-child(7)
+                            {
+                                top: 490px;
+                                left: 6%;
+                            }
+
+                            &:nth-child(8)
+                            {
+                                top: 490px;
+                                left: 31%;
+                            }
+
+                            &:nth-child(9)
+                            {
+                                top: 660px;
+                                left: 20%;
+                            }
+
+                            &:nth-child(10)
+                            {
+                                top: 830px;
+                                left: 25%;
+                            }
+
+                            &:nth-child(11)
+                            {
+                                top: 660px;
+                                right: 22%;
+                            }
+
+                            &:nth-child(12)
+                            {
+                                top: 830px;
+                                right: 30%;
+                            }
+
+                            &:nth-child(13)
+                            {
+                                top: 830px;
+                                right: 0;
+                            }
+
+                            .experiencia-stroke
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                padding: 1px;
+
+                                background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+                                box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
+
+                                border-radius: 30px;
+
+                                position: relative;
+
+                                .identificador
+                                {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    height: 100%;
+
+                                    position: absolute;
+                                    left: 1px;
+
+                                    z-index: 2;
+
+                                    hr
+                                    {
+                                        width: 2px;
+                                        height: 50%;                                
+
+                                        border: none;
+                                    }
+                                }
+
+                                .azul
+                                {
+                                    hr
+                                    {
+                                        background: @azul;
+                                        box-shadow: 0px 0px 10px rgb(26 187 201 / 80%);
+                                    }
+                                }
+
+                                .roxo
+                                {
+                                    hr
+                                    {
+                                        background: @roxo;
+                                        box-shadow: 0px 0px 10px rgba(148, 36, 201, 0.8);
+                                    }
+                                }
+
+                                .experiencia-box
+                                {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-around;
+                                    
+                                    width: 210px;
+
+                                    background: #2C153C;
+
+                                    border-radius: 30px;
+
+                                    gap: 10px;
+
+                                    padding: 20px;
+
+                                    z-index: 1;
+
+                                    .logo-empresa
+                                    {
+                                        display: flex;
+                                        align-items: center;
+
+                                        gap: 10px;
+
+                                        img
+                                        {
+                                            width: 15px;
+                                            height: 15px;
+                                        }
+
+                                        span
+                                        {
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            font-size: 12px;
+                                            line-height: 17px;
+
+                                            color: @branco;
+                                        }
+                                    }
+
+                                    .marcacao
+                                    {
+                                        span
+                                        {
+                                            color: @azul !important;
+                                            opacity: 1 !important;
+                                        }
+                                    }
+
+                                    .periodo
+                                    {
+                                        display: flex;
+                                        align-items: center;
+
+                                        height: 17px;
+
+                                        span
+                                        {
+                                            font-style: normal;
+                                            font-weight: 300;
+                                            font-size: 12px;
+                                            line-height: 17px;
+
+                                            color: @branco;
+
+                                            opacity: .3;
+                                        }
+                                    }
+
+                                    .cargo
+                                    {
+                                        display: flex;
+                                        align-items: center;
+                                        p
+                                        {                                
+                                            font-style: normal;
+                                            font-weight: 300;
+                                            font-size: 12px;
+                                            line-height: 19px;
+
+                                            color: @branco;
+
+                                            margin: 0;
+                                        }
+                                    }
+
+                                    hr
+                                    {
+                                        width: 190px;
+                                        height: 1px;
+
+                                        background: @branco;
+
+                                        opacity: .2;
+
+                                        margin: 0;
+                                    }
+
+                                    .logo-instituicao
+                                    {
+                                        display: flex;
+                                        align-items: center;
+
+                                        gap: 10px;
+
+                                        span
+                                        {
+                                            font-style: normal;
+                                            font-weight: 300;
+                                            font-size: 14px;
+                                            line-height: 17px;
+
+                                            color: @branco;
+                                        }
+                                    }
+
+                                    .curso
+                                    {
+                                        display: flex;
+                                        align-items: center;
+                                        p
+                                        {                                
+                                            font-style: normal;
+                                            font-weight: 300;
+                                            font-size: 16px;
+                                            line-height: 19px;
+
+                                            color: @branco;
+
+                                            margin: 0;
+                                        }
+                                    }
+
+                                    /* CTA-Galeria */
+                                    .CTA-Galeria
+                                    {
+                                        display: flex;
+                                        flex-direction: row;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        background: #9424C920;
+                                        border-radius: 30px;
+                                        
+                                        width: 132px;
+                                    
+                                        transition: .2s;
+                                        
+                                        padding: 8px 0px;
+                                        gap: 10px;
+                                    
+                                        text-decoration: none;
+                        
+                                        span
+                                        {
+                                            font-style: normal;
+                                            font-weight: 500;
+                                            font-size: 12px;
+                                        
+                                            color: #A950D4;
+                                        }
+                                    
+                                        img
+                                        {
+                                            width: 12px;
+                                            height: 7px;
+                                        }
+                                    }
+                                    /* /CTA-Galeria */
+
+                                    .icon
+                                    {
+                                        position: absolute;
+                                        top: 25px;
+                                        right: 25px;
+                                    }
+                                }
+                            }
+
+                            &:hover
+                            {
+                                transform: translateY(-25px);                    
+                            }
+                        }
+                    }
+                }
+
+                .certificados
+                {
+                    width: 100%;
+                    height: 100vh;
+                    
+                    margin-top: 70px;
+
+                    position: relative;
+
+                    a
+                    {
+                        position: absolute;
+                        text-decoration: none;
+
+                        transition: .5s;
+
+                        z-index: 1;
+
+                        cursor: pointer;
+
+                        &:nth-child(1)
+                        {
+                            top: 10px;
+                            left: 1%;
+                        }
+
+                        &:nth-child(2)
+                        {
+                            top: 70px;
+                            left: 23%;
+                        }
+
+                        &:nth-child(3)
+                        {
+                            top: 280px;
+                            left: 23%;
+                        }
+
+                        &:nth-child(4)
+                        {
+                            top: 280px;
+                            left: 46%;
+                        }
+
+                        &:nth-child(5)
+                        {
+                            top: 80px;
+                            right: 15%;
+                        }
+
+                        &:nth-child(6)
+                        {
+                            top: 280px;
+                            right: 0%;
+                        }
+
+                        &:nth-child(7)
+                        {
+                            top: 490px;
+                            left: 6%;
+                        }
+
+                        &:nth-child(8)
+                        {
+                            top: 490px;
+                            left: 31%;
+                        }
+
+                        &:nth-child(9)
+                        {
+                            top: 660px;
+                            left: 20%;
+                        }
+
+                        &:nth-child(10)
+                        {
+                            top: 830px;
+                            left: 25%;
+                        }
+
+                        &:nth-child(11)
+                        {
+                            top: 660px;
+                            right: 22%;
+                        }
+
+                        &:nth-child(12)
+                        {
+                            top: 830px;
+                            right: 30%;
+                        }
+
+                        &:nth-child(13)
+                        {
+                            top: 830px;
+                            right: 0;
+                        }
+
+                        .experiencia-stroke
+                        {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            padding: 1px;
+
+                            background: linear-gradient(145.01deg, rgba(255, 255, 255, 0.2) 15.56%, rgba(255, 255, 255, 0) 85.76%);
+                            box-shadow: 10px 30px 30px rgba(0, 0, 0, 0.2);
+
+                            border-radius: 30px;
+
+                            position: relative;
+
+                            .identificador
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                height: 100%;
+
+                                position: absolute;
+                                left: 1px;
+
+                                z-index: 2;
+
+                                hr
+                                {
+                                    width: 2px;
+                                    height: 50%;                                
+
+                                    border: none;
+                                }
+                            }
+
+                            .azul
+                            {
+                                hr
+                                {
+                                    background: @azul;
+                                    box-shadow: 0px 0px 10px rgb(26 187 201 / 80%);
+                                }
+                            }
+
+                            .roxo
+                            {
+                                hr
+                                {
+                                    background: @roxo;
+                                    box-shadow: 0px 0px 10px rgba(148, 36, 201, 0.8);
+                                }
+                            }
+
+                            .experiencia-box
+                            {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                
+                                width: 210px;
+
+                                background: #2C153C;
+
+                                border-radius: 30px;
+
+                                gap: 10px;
+
+                                padding: 20px;
+
+                                z-index: 1;
+
+                                .logo-empresa
+                                {
+                                    display: flex;
+                                    align-items: center;
+
+                                    gap: 10px;
+
+                                    img
+                                    {
+                                        width: 15px;
+                                        height: 15px;
+                                    }
+
+                                    span
+                                    {
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        font-size: 12px;
+                                        line-height: 17px;
+
+                                        color: @branco;
+                                    }
+                                }
+
+                                .marcacao
+                                {
+                                    span
+                                    {
+                                        color: @azul !important;
+                                        opacity: 1 !important;
+                                    }
+                                }
+
+                                .periodo
+                                {
+                                    display: flex;
+                                    align-items: center;
+
+                                    height: 17px;
+
+                                    span
+                                    {
+                                        font-style: normal;
+                                        font-weight: 300;
+                                        font-size: 12px;
+                                        line-height: 17px;
+
+                                        color: @branco;
+
+                                        opacity: .3;
+                                    }
+                                }
+
+                                .cargo
+                                {
+                                    display: flex;
+                                    align-items: center;
+                                    p
+                                    {                                
+                                        font-style: normal;
+                                        font-weight: 300;
+                                        font-size: 12px;
+                                        line-height: 19px;
+
+                                        color: @branco;
+
+                                        margin: 0;
+                                    }
+                                }
+
+                                hr
+                                {
+                                    width: 190px;
+                                    height: 1px;
+
+                                    background: @branco;
+
+                                    opacity: .2;
+
+                                    margin: 0;
+                                }
+
+                                .logo-instituicao
+                                {
+                                    display: flex;
+                                    align-items: center;
+
+                                    gap: 10px;
+
+                                    span
+                                    {
+                                        font-style: normal;
+                                        font-weight: 300;
+                                        font-size: 14px;
+                                        line-height: 17px;
+
+                                        color: @branco;
+                                    }
+                                }
+
+                                .curso
+                                {
+                                    display: flex;
+                                    align-items: center;
+                                    p
+                                    {                                
+                                        font-style: normal;
+                                        font-weight: 300;
+                                        font-size: 16px;
+                                        line-height: 19px;
+
+                                        color: @branco;
+
+                                        margin: 0;
+                                    }
+                                }
+
+                                /* CTA-Galeria */
+                                .CTA-Galeria
+                                {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    background: #9424C920;
+                                    border-radius: 30px;
+                                    
+                                    width: 132px;
+                                
+                                    transition: .2s;
+                                    
+                                    padding: 8px 0px;
+                                    gap: 10px;
+                                
+                                    text-decoration: none;
+                    
+                                    span
+                                    {
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 12px;
+                                    
+                                        color: #A950D4;
+                                    }
+                                
+                                    img
+                                    {
+                                        width: 12px;
+                                        height: 7px;
+                                    }
+                                }
+                                /* /CTA-Galeria */
+
+                                .icon
+                                {
+                                    position: absolute;
+                                    top: 25px;
+                                    right: 25px;
+                                }
+                            }
+                        }
+
+                        &:hover
+                        {
+                            transform: translateY(-25px);                    
+                        }
                     }
                 }
             }
         }
+        /* /Linha do tempo */
+
+        /* Footer */
+        footer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 145px;
+
+            padding: 0px 20px 30px 20px;
+
+            .footer-row
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 98%;
+                height: 145px;
+
+                background: #310F40;
+                box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.3);
+                border-radius: 30px;
+
+                position: relative;
+                z-index: 1;
+
+                .footer
+                {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    width: 80%;
+                    height: 145px;
+
+                    .footer-menu
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 60%;
+
+                        .footer-categorias
+                        {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            width: 60%;
+
+                            .setor a
+                            {
+                                text-decoration: none;
+
+                                p
+                                {
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 20px;
+                                    line-height: 24px;
+                                    text-align: center;
+                    
+                                    color: @texto;
+                    
+                                    position: relative;
+                    
+                                    width: 150px;
+                                }
+                            }
+                        }
+                    }
+
+                    .redes-contato
+                    {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        width: 130px;
+
+                        margin-right: 90px;
+
+                        a
+                        {
+                            .icon-social
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                
+                                width: 35px;
+                                height: 35px;
+
+                                border: 1px solid #ffffff20;
+                                border-radius: 50px;
+
+                                transition: .2s;
+                            }
+
+                            &:hover
+                            {
+                                .icon-social
+                                {
+                                    border: 1px solid @azul;
+                                }
+                            }
+
+                            &:last-child
+                            {
+                                .icon-social
+                                {
+                                    border: 1px solid @azul;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        /* /Footer */
     }
 }
-/* /Linha do tempo */
 
 /* Baixar Currículo */
 #BaixarCV
@@ -2053,129 +2827,6 @@ nav
     }
 }
 /* /Voltar ao topo */
-
-/* Footer */
-footer
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    height: 145px;
-
-    padding: 0px 20px 30px 20px;
-
-    .footer-row
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        width: 98%;
-        height: 145px;
-
-        background: #310F40;
-        box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.3);
-        border-radius: 30px;
-
-        position: relative;
-        z-index: 1;
-
-        .footer
-        {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            width: 80%;
-            height: 145px;
-
-            .footer-menu
-            {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                width: 60%;
-
-                .footer-categorias
-                {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-
-                    width: 60%;
-
-                    .setor a
-                    {
-                        text-decoration: none;
-
-                        p
-                        {
-                            font-style: normal;
-                            font-weight: 400;
-                            font-size: 20px;
-                            line-height: 24px;
-                            text-align: center;
-            
-                            color: @texto;
-            
-                            position: relative;
-            
-                            width: 150px;
-                        }
-                    }
-                }
-            }
-
-            .redes-contato
-            {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                width: 130px;
-
-                margin-right: 90px;
-
-                a
-                {
-                    .icon-social
-                    {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        
-                        width: 35px;
-                        height: 35px;
-
-                        border: 1px solid #ffffff20;
-                        border-radius: 50px;
-
-                        transition: .2s;
-                    }
-
-                    &:hover
-                    {
-                        .icon-social
-                        {
-                            border: 1px solid @azul;
-                        }
-                    }
-
-                    &:last-child
-                    {
-                        .icon-social
-                        {
-                            border: 1px solid @azul;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-/* /Footer */
 
 /* PopUps */
 #PopupQualidoc, #PopupYouexp, #PopupOnofre, #PopupCG, #PopupOnvip
