@@ -88,6 +88,7 @@ function FundoRosa()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -111,6 +112,7 @@ function FundoVerdeEscuro()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -134,6 +136,7 @@ function FundoVerdeClaro()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -157,6 +160,7 @@ function FundoRoxo()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -180,6 +184,7 @@ function FundoAzulClaro()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -203,6 +208,7 @@ function FundoAzulEscuro()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -226,6 +232,7 @@ function FundoLaranjaClaro()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -249,6 +256,7 @@ function FundoLaranja()
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
   Laranja.style.color="#ffffff";
+  Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ffffff";
@@ -271,6 +279,7 @@ function FundoOriginal()
 
   var original = document.getElementById("titulo");
   original.style.color="#1ABBC9";
+  original.classList.add("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
   paragrafoDarte.style.color="#ECD4FF";
@@ -281,7 +290,7 @@ function FundoOriginal()
   const boxes = document.querySelectorAll('.box-pantene');
 
   boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
+    box.style.backgroundColor = '#ffffff10';
+    box.style.opacity = '0.5';
   });
 }
