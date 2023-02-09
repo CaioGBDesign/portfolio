@@ -1100,10 +1100,29 @@ nav
 
                     z-index: 1;
 
-                    #titulo
-                    {                        
-                        color: #1ABBC9;
+                    .tituloGradiente
+                    {
 
+                        h2
+                        {
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 18px;
+                            text-align: right;
+                
+                            background: linear-gradient(90.44deg, #9424C9 0%, #1ABBC9 100%), #1ABBC9;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                            text-fill-color: transparent;
+
+                            margin: 0;
+                        }
+                    }
+
+                    #titulo
+                    {
                         transition: .5s;
 
                         h2
