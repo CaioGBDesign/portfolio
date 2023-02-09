@@ -183,11 +183,11 @@ function FundoAzulClaro()
 
   var Laranja = document.getElementById("titulo");
   Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
+  Laranja.style.color="#2B5561";
   Laranja.classList.remove("tituloGradiente");
 
   var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
+  paragrafoDarte.style.color="#2B5561";
 
   var original = document.getElementById("original");
   original.style.transform="translateY(-10px)";
@@ -195,7 +195,7 @@ function FundoAzulClaro()
   const boxes = document.querySelectorAll('.box-pantene');
 
   boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
+    box.style.backgroundColor = '#2B5561';
     box.style.opacity = '1';
   });
 }
