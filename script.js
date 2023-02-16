@@ -44,19 +44,6 @@ function fecharOnofre()
   fecharOnofre.style.display="none";
 }
 
-//PopUp CG
-function CGFreela()
-{
-  var CGFreela = document.getElementById("PopupCG");
-  CGFreela.style.display="flex";
-}
-
-function fecharCG()
-{
-  var fecharCG = document.getElementById("PopupCG");
-  fecharCG.style.display="none";
-}
-
 //PopUp Onvip
 function Onvip()
 {
@@ -294,3 +281,14 @@ function FundoOriginal()
     box.style.opacity = '0.5';
   });
 }
+
+// Menu mobile
+let list = document.querySelectorAll('.port-list');
+function activeLink(){
+  list.forEach((item) =>
+  item.classList.remove('active'));
+  this.classList.add('active');
+}
+
+list.forEach((item)=>
+item.addEventListener('click',activeLink));
