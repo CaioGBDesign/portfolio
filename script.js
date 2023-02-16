@@ -59,14 +59,6 @@ function fecharOnvip()
 
 // Direção de arte
 
-function CopiarA()
-{
-  navigator.clipboard.writeText('#DF5297').then(() => 
-  { 
-    console.log('codigo copiado')
-  }); 
-}
-
 function FundoRosa()
 {
   var Laranja = document.getElementById("adobe");
@@ -292,3 +284,29 @@ function activeLink(){
 
 list.forEach((item)=>
 item.addEventListener('click',activeLink));
+
+// Copiar e-mail
+
+function CopiarNadia()
+{
+  navigator.clipboard.writeText('nadiazarour@gmail.com').then(() => 
+  { 
+    console.log('codigo copiado')
+  }); 
+}
+
+function CopiarLuisa()
+{
+  navigator.clipboard.writeText('luisacagnini03@gmail.com').then(() => 
+  { 
+    console.log('codigo copiado')
+  }); 
+}
+
+function CopiarRafael()
+{
+  navigator.clipboard.writeText('rholtzbr@gmail.com').then(() => 
+  { 
+    console.log('codigo copiado')
+  }); 
+}
