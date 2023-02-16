@@ -488,7 +488,7 @@ nav
             height: auto;
         }
 
-        &:last-child
+        &:nth-child(6)
         {
             width: 100%;
             height: auto;
@@ -497,9 +497,11 @@ nav
 
             @media screen and (max-width: 992px)
             {
-                height: 30vh;
+                //height: 30vh;
 
-                position: relative;
+                //position: relative;
+                
+                height: 30vh;
             }
         }
         
@@ -515,6 +517,11 @@ nav
             z-index: 2;
 
             position: relative;
+
+            @media screen and (max-width: 992px)
+            {
+                margin-bottom: 150px;
+            }
 
             .Banner-infos-content
             {
@@ -1098,6 +1105,8 @@ nav
 
             @media screen and (max-width: 992px)
             {
+                margin-bottom: 70px;
+
                 justify-content: center;
                 
                 height: 100vh;
@@ -1143,8 +1152,8 @@ nav
 
                     @media screen and (max-width: 992px)
                     {
-                        width: 100%;
-                        height: 280px;
+                        width: 80%;
+                        height: 200px;
                         
                         order: 1;
                     }
@@ -2143,6 +2152,7 @@ nav
             @media screen and (max-width: 992px)
             {
                 margin: 0px;
+                margin-bottom: 110px;
             }
 
             .dominios-content
@@ -3710,6 +3720,8 @@ nav
 
                 position: absolute;
                 bottom: 0px;
+
+                display: none;
             }
 
             .footer-row
@@ -3844,6 +3856,194 @@ nav
             }
         }
         /* /Footer */
+    }
+
+    .menu-mobile
+    {
+
+        position: absolute;
+        left: 0px;
+        bottom: 20px;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        z-index: 2;
+
+        .navigation
+        {
+            width: 95%;
+            height: 120px;
+
+            background: #310F40;
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: center;
+
+            ul
+            {
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                width: 100%;
+
+                margin: 0px;
+                padding: 0px;
+
+                li
+                {
+                    position: relative;
+
+                    list-style: none;
+
+                    height: 80px;
+
+                    margin: 0px;
+
+                    a
+                    {
+                        position: relative;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        width: 100%;
+                        
+                        text-align: center;
+
+                        font-weight: 500;
+
+                        span
+                        {
+                            img
+                            {
+                                width: 30px;
+                            }
+                        }
+
+                        .icon
+                        {
+                            position: relative;
+                            display: block;
+
+                            line-height: 45px;
+
+                            font-size: 1.5em;
+
+                            transition: .5s;
+
+                            text-align: center;
+
+                            color: #ffffff50;
+
+                            &:hover
+                            {
+                                color: rgba(255,255,255,1);
+                            }
+                        }
+                        
+                        .nome-list
+                        {
+                            font-weight: 600;
+                            font-size: 10px;
+
+                            color: @texto;
+
+                            text-transform: uppercase;
+                            transform: translateY(0px);
+
+                            letter-spacing: 0.05em;
+
+                            opacity: 1;
+
+                            z-index: 10;
+                        }
+                    }
+
+                    &:nth-child(1).active ~ .marcador
+                    {
+                        transform: translateX(calc(-156px * 1));
+                    }
+
+                    &:nth-child(2).active ~ .marcador
+                    {
+                        transform: translateX(calc(-104px * 1));
+                    }
+
+                    &:nth-child(3).active ~ .marcador
+                    {
+                        transform: translateX(calc(-20px * 2));
+                    }
+
+                    &:nth-child(4).active ~ .marcador
+                    {
+                        transform: translateX(calc(17px  * 3));
+                    }
+
+                    &:nth-child(5).active ~ .marcador
+                    {
+                        transform: translateX(calc(36px * 4));
+                    }
+                }
+
+                .active
+                {
+                    a
+                    {
+                        .icon
+                        {
+                            color: #1ABBC9;
+
+                            transform: translateY(-8px);
+                        }
+
+                        /*.nome-list
+                        {
+                            opacity: 1;
+
+                            transform: translateY(16px);
+                        }*/
+                    }
+                }
+            }
+
+            .marcador
+            {
+                position: absolute;
+
+                width: 80px;
+                height: 100px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                cursor: pointer;
+
+                transition: .5s;
+
+                &::before
+                {
+                    content: '';
+
+                    position: absolute;
+                    bottom: 14px;
+
+                    width: 50%;
+                    height: 5px;
+
+                    background: @azul;
+                    border-radius: 10px;
+                }
+            }
+        }
     }
 }
 
@@ -4106,7 +4306,7 @@ nav
 
                         @media screen and (max-width: 992px)
                         {
-                            order: 1;
+                            margin: 0px 0px 0px -20px;
                         }
                     }
 
@@ -4128,6 +4328,8 @@ nav
                         @media screen and (max-width: 992px)
                         {
                             width: 95%;
+
+                            order: 1;
                         }
 
                         .softwares-usados
@@ -4257,6 +4459,12 @@ nav
                         @media screen and (max-width: 992px)
                         {
                             width: 95%;
+
+                            gap: 20px;
+
+                            order: 0;
+
+                            margin-top: 10px;
                         }
 
                         .periodo-job
@@ -4271,11 +4479,6 @@ nav
                             background: linear-gradient(0deg, rgba(148, 36, 201, 0.1), rgba(148, 36, 201, 0.1)), #2F1842;
                             box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
                             border-radius: 10px;
-
-                            @media screen and (max-width: 992px)
-                            {
-                                order: 2;
-                            }
 
                             span
                             {
@@ -4299,7 +4502,7 @@ nav
                             justify-content: space-around;
     
                             width: 100%;
-                            height: 226px;                        
+                            height: 226px;
     
                             border-radius: 15px;
     
@@ -4307,7 +4510,9 @@ nav
 
                             @media screen and (max-width: 992px)
                             {
-                                order: 0;
+                                height: 120px;
+    
+                                margin-top: 0px;
                             }
     
                             img
@@ -4367,6 +4572,8 @@ nav
                             padding: 30px 0px;
 
                             width: 95%;
+
+                            order: 2;
                         }
 
                         .sobre-empresa
@@ -4389,9 +4596,21 @@ nav
                                 justify-content: center;
                                 align-items: center;
 
+                                @media screen and (max-width: 992px)
+                                {
+                                    width: 90%;
+
+                                    border-radius: 10px;
+                                }
+
                                 img
                                 {
                                     width: 80%;
+
+                                    @media screen and (max-width: 992px)
+                                    {
+                                        width: 60%;
+                                    }
                                 }
                             }
 
@@ -4484,6 +4703,8 @@ nav
 
                                 @media screen and (max-width: 992px)
                                 {
+                                    gap: 10px;
+
                                     width: 90%;
 
                                     padding: 10px;
@@ -4512,6 +4733,11 @@ nav
                                     height: 100%;
                                     max-height: 100%;
                                     min-height: auto;
+
+                                    @media screen and (max-width: 992px)
+                                    {
+                                        width: 50px;
+                                    }
                                 }
 
                                 .contatos-solicitacoes
