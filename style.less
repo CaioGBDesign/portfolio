@@ -1389,6 +1389,8 @@ nav
                                 gap: 10px;
                             
                                 text-decoration: none;
+
+                                cursor: pointer;
                             
                                 span
                                 {
@@ -1906,6 +1908,8 @@ nav
                             gap: 10px;
                         
                             text-decoration: none;
+
+                            cursor: pointer;
                         
                             span
                             {
@@ -2334,6 +2338,8 @@ nav
                                 gap: 10px;
                             
                                 text-decoration: none;
+
+                                cursor: pointer;
                             
                                 span
                                 {
@@ -4143,7 +4149,7 @@ nav
 /* /Voltar ao topo */
 
 /* PopUps */
-#PopupQualidoc, #PopupYouexp, #PopupOnofre, #PopupCG, #PopupOnvip
+#PopupQualidoc, #PopupYouexp, #PopupOnofre, #PopupCG, #PopupOnvip, #PopupUnderConstruction
 {
     display: none;
 }
@@ -4929,6 +4935,198 @@ nav
                             line-height: 12px;
 
                             color: #FFFFFF;
+                        }
+                    }
+
+                    .UnderC
+                    {
+                        width: 600px;
+                        height: 634px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        gap: 40px;
+
+                        position: relative;
+
+                        .engrenagens
+                        {
+                            position: relative;
+
+                            width: 108px;
+                            height: 68px;
+
+                            img
+                            {
+                                position: absolute;
+
+                                &:nth-child(1)
+                                {
+                                    width: 33px;
+
+                                    animation: EngrenagemA 5s linear infinite;
+    
+                                    @keyframes EngrenagemA
+                                    {
+                                        to
+                                        {
+                                            transform: rotate(-180deg);
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(2)
+                                {
+                                    width: 48px;
+
+                                    top: 20px;
+                                    left: 20px;
+
+                                    animation: EngrenagemB 5s linear infinite;
+    
+                                    @keyframes EngrenagemB
+                                    {
+                                        to
+                                        {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+                                }
+    
+                                &:nth-child(3)
+                                {
+                                    width: 33px;
+
+                                    top: 30px;
+                                    right: 8px;
+
+                                    animation: EngrenagemC 5s linear infinite;
+    
+                                    @keyframes EngrenagemC
+                                    {
+                                        to
+                                        {
+                                            transform: rotate(-180deg);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        span
+                        {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 24px;
+                            text-align: center;
+
+                            color: #ECD4FF;
+                        }
+
+                        #cronometro
+                        {
+                            opacity: 0.5;
+
+                            margin: 0px;
+
+                            display: flex;
+
+                            font-style: normal;
+                            font-weight: 300;
+                            font-size: 40px;
+                            line-height: 40px;
+                            text-align: center;
+
+                            color: #ECD4FF;
+
+                            span
+                            {
+                                margin: 10px 15px;
+                            }
+
+                            div
+                            {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+
+                                p
+                                {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        .faixa-de-aviso
+                        {
+                            position: absolute;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            width: 100%;
+
+                            img
+                            {
+                                width: 100%;
+                            }
+
+                            p
+                            {
+                                position: absolute;
+
+                                background: #D6B805;
+
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 25px;
+
+                                text-align: center;
+                                letter-spacing: 0.15em;
+                                text-transform: uppercase;
+
+                                color: #1C1C1C;
+
+                                box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.4);
+
+                                &:nth-child(1)
+                                {
+                                    transform: rotate(-45deg);
+
+                                    top: -170px;
+                                    left: -150px;
+                                }
+
+                                &:nth-child(2)
+                                {
+                                    transform: rotate(20.63deg);
+
+                                    top: -280px;
+                                    right: -140px;
+                                }
+
+                                &:nth-child(3)
+                                {
+                                    transform: rotate(30deg);
+
+                                    bottom: -240px;
+                                    left: -220px;
+                                }
+
+                                &:nth-child(4)
+                                {
+                                    transform: rotate(-45deg);
+
+                                    bottom: -190px;
+                                    right: -230px;
+                                }
+                            }
                         }
                     }
                 }
