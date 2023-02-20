@@ -57,6 +57,19 @@ function fecharOnvip()
   fecharOnvip.style.display="none";
 }
 
+//PopUp Under Construction
+function UnderConstruction()
+{
+  var UnderConstruction = document.getElementById("PopupUnderConstruction");
+  UnderConstruction.style.display="flex";
+}
+
+function fecharUnderConstruction()
+{
+  var fecharUnderConstruction = document.getElementById("PopupUnderConstruction");
+  fecharUnderConstruction.style.display="none";
+}
+
 // Direção de arte
 
 function FundoRosa()
@@ -310,3 +323,34 @@ function CopiarRafael()
     console.log('codigo copiado')
   }); 
 }
+
+
+// Contagem regressiva
+
+// Data de início
+var countDownDate = new Date("Feb 22, 2023 12:00:00").getTime();
+
+// Para atualizar a contagem regressiva a cada 1 segundo
+var x = setInterval(function() {
+
+  // Obter data e hora de hoje
+  var now = new Date().getTime();
+    
+  // Para encontrar a distância entre a data inicial e a final
+  var distance = countDownDate - now;
+    
+  // Cálculos
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Resultado no front
+  document.getElementById("cronometro").innerHTML = "<div>" + days + "<p>" + "Dias" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + hours + "<p>" + "Horas" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + minutes + "<p>" + "Minutos" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + seconds + "<p>" + "Segundos" + "</p>" + "</div>";
+    
+  // Quando a contagm terminar
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("cronometro").innerHTML = "EXPIRED";
+  }
+}, 1000);
