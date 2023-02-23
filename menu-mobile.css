@@ -1,0 +1,172 @@
+@media screen and (min-width: 992px)
+{
+    .header-mobile
+    {
+        display: none;
+    }
+}
+
+a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+  
+.header-mobile
+{
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+    height: 4.6875rem;
+    
+    position: absolute;
+    z-index: 3;
+}
+  
+.logo
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    margin-left: 20px;
+
+    position: relative;
+    z-index: 2;
+}
+  
+.menu-mobile
+{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+  
+.menu-mobile a
+{
+    display: block;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+  
+.btn-menu-mobile
+{
+    display: none;
+}
+  
+@media (max-width: 900px)
+{
+    .header-mobile
+    {
+        display: flex;
+
+        background: #9424C9;
+    }
+
+    .menu-mobile
+    {
+        display: block;
+
+        position: absolute;
+        top: 55px;
+        left: 0px;
+
+        background: #9424C9;
+
+        text-align: center;
+
+        width: 100%;
+        height: 0;
+
+        z-index: 1;
+
+        visibility: hidden;
+        overflow-y: hidden;
+
+        transition: 0.5s;
+
+        padding: 0px;
+    }
+
+    .menu-mobile a
+    {
+        padding: 1rem 0;
+        margin-inline: 1rem;
+        border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+        border-radius: 0;
+    }
+
+    .btn-menu-mobile
+    {
+        background: none;
+        border: none;
+        font: inherit;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        padding: 1rem 0;
+        cursor: pointer;
+
+        position: relative;
+        z-index: 2;
+    }
+
+    .hamburger
+    {
+        border-top: 0.125rem solid white;
+        width: 1.25rem;
+    }
+
+    .hamburger::after,
+    .hamburger::before
+    {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: white;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .nav
+    {
+        margin-right: 20px;
+    }
+
+    .nav.active .menu-mobile
+    {
+        height: 250px;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav.active .hamburger
+    {
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburger::before
+    {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburger::after
+    {
+        transform: rotate(-135deg);
+        top: -0.4375rem;
+    }
+  
+    .header-mobile.Fundo-Header-Mobile {
+      bottom:32px;
+      pointer-events: auto;
+      opacity:1;
+    }
+
+    .Fundo-Header-Mobile
+    {
+        background: black;
+    }
+}
