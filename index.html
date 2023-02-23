@@ -11,12 +11,11 @@
 
     <link rel="stylesheet/less" type="text/css" href="style.less" />
 
-    <link rel="icon" type="image/x-icon" href="https://caiogbdesign.github.io/portfolio/logo-CG.svg">
+    <link rel="stylesheet" href="menu-mobile.css">
 
 </head>
 <body>
-
-    <nav>
+    <div class="header-desktop">
         <div class="header">
             <div class="header-box">
                 <a href="#home">
@@ -60,7 +59,24 @@
                 </div>
             </div>
         </div>
-    </nav>
+    </div class="header-desktop">
+
+    <header class="header-mobile">
+        <a href="#home" class="logo">
+          <img src="logo-CG.svg" alt="Caio Goulart Logo">
+        </a>
+        <nav class="nav">
+          <button class="btn-menu-mobile" aria-label="Abrir Menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false" onclick="MenuMobile()">
+            Menu<span class="hamburger"></span>
+          </button>
+          <ul class="menu-mobile" id="menu-mobile" role="menu-mobile">
+            <li><a href="#UXUI">UX/UI</a></li>
+            <li><a href="#adobe">Direção de arte</a></li>
+            <li><a href="#curriculo">Experiências</a></li>
+            <li><a href="https://caiogbdesign.github.io/portfolio/Caio-Goulart-CV.pdf" target="_blank">Baixar currículo</a></li>
+          </ul>
+        </nav>
+    </header>
 
     <div class="mouse-content">
         <div class="mouse">
@@ -89,14 +105,14 @@
                                 <p>Quem eu sou</p>
                             </div>
                             <div class="segundo-texto">
-                                <p>Designer fascinado pelo desafio de tornar tudo o que podemos ver ainda mais bonito e funcional.</p>
+                                <p>Designer fascinado por tornar tudo o que podemos ver, ainda mais bonito.</p>
                             </div>
                         </div>
                         <!-- /Título -->
             
                         <!-- CTA -->
                         <div class="CTA">
-                            <a href="https://api.whatsapp.com/send?phone=5511949120072&text=Ol%C3%A1,%20Caio!%20Tudo%20bem?%20Achei%20seu%20portf%C3%B3lio%20incr%C3%ADvel%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%20na%20empresa%20onde%20trabalho.%20Quando%20podemos%20conversar?">
+                            <a href="#">
                                 <span>Entrar em contato</span>
                                 <img src="arrow-01.svg">
                             </a>
@@ -152,7 +168,7 @@
             <div class="apresentacao-uxui-const">
                 <div class="apresentacao-uxui">
                     <h2>Sem dúvidas o UX/UI é a parte mais expressiva da minha experiência.</h2>
-                    <p>Iniciei minha carreira trabalhando com criação, no começo a ideia era somente deixar tudo lindo, mas aos poucos fui buscando cada vez mais entender meu usuário de diferentes formas. Em determinado momento, entendi que precisava de algo novo. Me apaixonei pelo estudo de comportamento do usuário e quando finalmente entendi esse meu lado, assumi a nova carreira e direcionei meus estudos ao UX e UI.</p>
+                    <p>Iniciei minha carreira trabalhando com criação, no começo a ideia era somente deixar tudo lindo, mas aos poucos fui buscndo cada vez mais entender meu usuário de diferentes formas. Em determinado momento, entendi que precisava de algo novo. Me apaixonei pelo estudo de comportamento do usuário e quando finalmente entendi esse meu lado, assumi a nova carreira e direcionei meus estudos ao UX e UI.</p>
                     <hr>
                     <p>Como designer de UX/UI gosto de buscar soluções imersivas. Que tal jogarmos um pouquinho enquanto testamos nosso conhecimento?</p>
                           
@@ -166,7 +182,7 @@
                         </div>
 
                         <div class="CTA-projetos">
-                            <a href="https://api.whatsapp.com/send?phone=5511949120072&text=Ol%C3%A1,%20Caio!%20Tudo%20bem?%20Achei%20seu%20portf%C3%B3lio%20incr%C3%ADvel%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%20na%20empresa%20onde%20trabalho.%20Quando%20podemos%20conversar?">
+                            <a href="#">
                                 <span>Entrar em contato</span>
                                 <img src="arrow-01.svg">
                             </a>
@@ -213,7 +229,7 @@
                             </div>
     
                             <div class="CTA-projetos">
-                                <a href="https://api.whatsapp.com/send?phone=5511949120072&text=Ol%C3%A1,%20Caio!%20Tudo%20bem?%20Achei%20seu%20portf%C3%B3lio%20incr%C3%ADvel%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%20na%20empresa%20onde%20trabalho.%20Quando%20podemos%20conversar?">
+                                <a href="#">
                                     <span>Entrar em contato</span>
                                     <img src="arrow-01.svg">
                                 </a>
@@ -468,7 +484,7 @@
                             </div>
     
                             <div class="CTA-projetos">
-                                <a href="https://api.whatsapp.com/send?phone=5511949120072&text=Ol%C3%A1,%20Caio!%20Tudo%20bem?%20Achei%20seu%20portf%C3%B3lio%20incr%C3%ADvel%20e%20gostaria%20de%20conversar%20com%20voc%C3%AA%20sobre%20uma%20oportunidade%20na%20empresa%20onde%20trabalho.%20Quando%20podemos%20conversar?">
+                                <a href="#">
                                     <span>Entrar em contato</span>
                                     <img src="arrow-01.svg">
                                 </a>
@@ -984,7 +1000,7 @@
                     <div class="footer">
                         <div class="footer-menu">                
                             <div class="logo">
-                                <img src="logo-CG.svg" alt="Caio Goulart">
+                                <img src="logo-CG.svg" alt="">
                             </div>
             
                             <div class="footer-categorias">
@@ -1028,54 +1044,6 @@
             </footer>
             <!-- /Footer -->
         </section>
-
-        <div class="menu-mobile">
-            <div class="navigation">
-                <ul>
-                    <li class="port-list active">
-                        <a href="#home">
-                            <span class="icon">
-                                <img src="logo-CG.svg" alt="Caio Goulart">
-                            </span>
-                            <span class="nome-list">Início</span>
-                        </a>
-                    </li>
-                    <li class="port-list">
-                        <a href="#UXUI">
-                            <span class="icon">
-                                <ion-icon name="phone-portrait-outline"></ion-icon>
-                            </span>
-                            <span class="nome-list">UX/UI</span>
-                        </a>
-                    </li>
-                    <li class="port-list">
-                        <a href="#adobe">
-                            <span class="icon">
-                                <ion-icon name="brush-outline"></ion-icon>
-                            </span>
-                            <span class="nome-list">D. de arte</span>
-                        </a>
-                    </li>
-                    <li class="port-list">
-                        <a href="#curriculo">
-                            <span class="icon">
-                                <ion-icon name="newspaper-outline"></ion-icon>
-                            </span>
-                            <span class="nome-list">Experiências</span>
-                        </a>
-                    </li>
-                    <li class="port-list">
-                        <a href="https://caiogbdesign.github.io/portfolio/Caio-Goulart-CV.pdf" target="_blank">
-                            <span class="icon"><ion-icon name="arrow-down-circle-outline"></ion-icon></span>
-                            <span class="nome-list">Currículo</span>
-                        </a>
-                    </li>
-
-                    <div class="marcador"></div>
-                </ul>
-            </div>
-        </div>
-        
     </div>
 
     <!-- PopUps -->
@@ -1254,7 +1222,7 @@
 
                                         <h2>Nadia Zarour<br><span>Head de Marketing</span></h2>
 
-                                        <div class="email-copiar" onclick="CopiarNadia()">
+                                        <div class="email-copiar">
                                             <span>nadiazarour@gmail.com</span>
                                             <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.45455 0H1.63636C1.33637 0 1.09091 0.252632 1.09091 0.561404V6.31579C1.09091 6.62456 1.33637 6.87719 1.63636 6.87719H5.45455C5.75455 6.87719 6 6.62456 6 6.31579V0.561404C6 0.252632 5.75455 0 5.45455 0ZM0.545455 2.94737H0V7.4386C0 7.74737 0.24546 8 0.545455 8H4.90909V7.4386H0.545455V2.94737ZM1.63636 6.31579H5.45455V0.561404H1.63636V6.31579Z" fill="#ECD4FF"/>
@@ -1278,7 +1246,7 @@
 
                                         <h2>Luisa Cagnini<br><span>Head Jurídico</span></h2>
 
-                                        <div class="email-copiar" onclick="CopiarLuisa()">
+                                        <div class="email-copiar">
                                             <span>luisacagnini03@gmail.com</span>
                                             <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.45455 0H1.63636C1.33637 0 1.09091 0.252632 1.09091 0.561404V6.31579C1.09091 6.62456 1.33637 6.87719 1.63636 6.87719H5.45455C5.75455 6.87719 6 6.62456 6 6.31579V0.561404C6 0.252632 5.75455 0 5.45455 0ZM0.545455 2.94737H0V7.4386C0 7.74737 0.24546 8 0.545455 8H4.90909V7.4386H0.545455V2.94737ZM1.63636 6.31579H5.45455V0.561404H1.63636V6.31579Z" fill="#ECD4FF"/>
@@ -1287,7 +1255,7 @@
                             
                                         <!-- CTA referência -->
                                         <div class="CTA-referencias">
-                                            <a href="https://api.whatsapp.com/send?phone=5511917231991&text=Ol%C3%A1,%20Dra.%20Luisa!%20Tudo%20bem?%20Estamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%20Quando%20podemos%20conversar?" target="_blank">
+                                            <a href="https://wa.me/5511998700052?text=Ol%C3%A1,%20Nadia!%0A%0ATudo%20bem?%0AEstamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%0AQuando%20podemos%20conversar?" target="_blank">
                                                 <span>Solicitar por Whatsapp</span>
                                             </a>
                                         </div>
@@ -1302,7 +1270,7 @@
 
                                         <h2>Rafael Holtz<br><span>Head de TI e Integrações</span></h2>
 
-                                        <div class="email-copiar" onclick="CopiarRafael()">
+                                        <div class="email-copiar">
                                             <span>rholtzbr@gmail.com</span>
                                             <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.45455 0H1.63636C1.33637 0 1.09091 0.252632 1.09091 0.561404V6.31579C1.09091 6.62456 1.33637 6.87719 1.63636 6.87719H5.45455C5.75455 6.87719 6 6.62456 6 6.31579V0.561404C6 0.252632 5.75455 0 5.45455 0ZM0.545455 2.94737H0V7.4386C0 7.74737 0.24546 8 0.545455 8H4.90909V7.4386H0.545455V2.94737ZM1.63636 6.31579H5.45455V0.561404H1.63636V6.31579Z" fill="#ECD4FF"/>
@@ -1311,7 +1279,7 @@
                             
                                         <!-- CTA referência -->
                                         <div class="CTA-referencias">
-                                            <a href="https://api.whatsapp.com/send?phone=555181761666&text=Ol%C3%A1,%20Rafael!%20Tudo%20bem?%20Estamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%20Quando%20podemos%20conversar?" target="_blank">
+                                            <a href="https://wa.me/5511998700052?text=Ol%C3%A1,%20Nadia!%0A%0ATudo%20bem?%0AEstamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%0AQuando%20podemos%20conversar?" target="_blank">
                                                 <span>Solicitar por Whatsapp</span>
                                             </a>
                                         </div>
@@ -1422,7 +1390,7 @@
                             
                                         <!-- CTA referência -->
                                         <div class="CTA-referencias">
-                                            <a href="https://api.whatsapp.com/send?phone=553183999834&text=Ol%C3%A1,%20Roger!%20Tudo%20bem?%20Estamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%20Quando%20podemos%20conversar?" target="_blank">
+                                            <a href="https://wa.me/5511998700052?text=Ol%C3%A1,%20Nadia!%0A%0ATudo%20bem?%0AEstamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%0AQuando%20podemos%20conversar?" target="_blank">
                                                 <span>Solicitar por Whatsapp</span>
                                             </a>
                                         </div>
@@ -1559,6 +1527,7 @@
                                         <h2>Raquel Ventura<br><span>Coordenadora de Marketing</span></h2>
 
                                         <div class="email-copiar">
+                                            <span>nadiazarour@gmail.com</span>
                                             <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.45455 0H1.63636C1.33637 0 1.09091 0.252632 1.09091 0.561404V6.31579C1.09091 6.62456 1.33637 6.87719 1.63636 6.87719H5.45455C5.75455 6.87719 6 6.62456 6 6.31579V0.561404C6 0.252632 5.75455 0 5.45455 0ZM0.545455 2.94737H0V7.4386C0 7.74737 0.24546 8 0.545455 8H4.90909V7.4386H0.545455V2.94737ZM1.63636 6.31579H5.45455V0.561404H1.63636V6.31579Z" fill="#ECD4FF"/>
                                             </svg>                                                
@@ -1566,7 +1535,7 @@
                             
                                         <!-- CTA referência -->
                                         <div class="CTA-referencias">
-                                            <a href="https://api.whatsapp.com/send?phone=5511993849488&text=Ol%C3%A1,%20Raquel!%20Tudo%20bem?%20Estamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%20Quando%20podemos%20conversar?" target="_blank">
+                                            <a href="https://wa.me/5511998700052?text=Ol%C3%A1,%20Nadia!%0A%0ATudo%20bem?%0AEstamos%20procurando%20um%20profissional%20de%20UX/UI%20e%20gostaria%20de%20uma%20refer%C3%AAncia%20profissional%20do%20brilhante%20Caio%20Goulart%20com%20quem%20voc%C3%AA%20trabalhou.%0AQuando%20podemos%20conversar?" target="_blank">
                                                 <span>Solicitar por Whatsapp</span>
                                             </a>
                                         </div>
@@ -1666,8 +1635,5 @@
     <script src="script.js"></script>
     <!-- Less -->
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
