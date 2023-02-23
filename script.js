@@ -328,7 +328,7 @@ function CopiarRafael()
 // Contagem regressiva
 
 // Data de início
-var countDownDate = new Date("Feb 22, 2023 12:00:00").getTime();
+var countDownDate = new Date("Feb 28, 2023 12:00:00").getTime();
 
 // Para atualizar a contagem regressiva a cada 1 segundo
 var x = setInterval(function() {
