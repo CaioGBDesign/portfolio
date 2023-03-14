@@ -443,6 +443,8 @@ body
                 background: @fundo url(https://caiogbdesign.github.io/portfolio/fundo-mobile.png) center center no-repeat;
                 background-size: cover;
 
+                height: auto;
+
                 .Banner-infos
                 {
                     .Banner-infos-content
@@ -558,8 +560,6 @@ body
 
                     width: 90%;
 
-                    height: 100vh;
-
                     position: relative;
                 }
 
@@ -577,6 +577,8 @@ body
                     @media screen and (max-width: 992px)
                     {
                         width: 100%;
+
+                        margin-top: 80px;
                     }
 
                     .box-titulo
@@ -733,8 +735,18 @@ body
                         left: -290px;
 
                         display: flex;
-                        justify-content: center;
+                        justify-content: end;
                         align-items: center;
+
+                        @media screen and (max-width: 992px)
+                        {
+                            border: none;
+                            border-radius: 0px;
+
+                            width: 110%;
+                            
+                            left: -20px;
+                        }
 
                         .contatos
                         {
@@ -743,6 +755,11 @@ body
                             gap: 30px;
 
                             width: 300px;
+
+                            @media screen and (max-width: 992px)
+                            {
+                                width: 90%;
+                            }
 
                             .titulo-contatos
                             {
@@ -815,10 +832,13 @@ body
                                                 }
                                             }
 
-                                            &:hover
+                                            @media screen and (min-width: 992px)
                                             {
-                                                width: 100px;
-                                            }
+                                                &:hover
+                                                {
+                                                    width: 100px;
+                                                }
+                                            }                                            
                                         }
 
                                         &:nth-child(2)
@@ -841,10 +861,13 @@ body
                                                 }
                                             }
 
-                                            &:hover
+                                            @media screen and (min-width: 992px)
                                             {
-                                                width: 115px;
-                                            }
+                                                &:hover
+                                                {
+                                                    width: 150px;
+                                                }
+                                            }    
                                         }
 
                                         &:nth-child(3)
@@ -867,10 +890,27 @@ body
                                                 }
                                             }
 
-                                            &:hover
+                                            @media screen and (max-width: 992px)
                                             {
                                                 width: 130px;
+
+                                                a
+                                                {
+                                                    .botao-de-contato
+                                                    {
+                                                        justify-content: center;
+                                                        gap: 10px;
+                                                    }
+                                                }
                                             }
+
+                                            @media screen and (min-width: 992px)
+                                            {
+                                                &:hover
+                                                {
+                                                    width: 130px;
+                                                }
+                                            }    
                                         }
                                     }
                                 }
