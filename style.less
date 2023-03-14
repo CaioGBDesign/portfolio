@@ -512,7 +512,11 @@ body
         &:nth-child(6)
         {
             width: 100%;
-            height: auto;
+            height: 230px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             //margin-top: 100px;
 
@@ -716,59 +720,191 @@ body
                     }
 
                     /* CTA */
-                    .CTA
+                    .dois-ctas-home
                     {
-                        background: @roxo;
-                        box-shadow: 0px 0px 25px rgba(148, 36, 201, 0.8);
-                        border-radius: 30px 30px 30px 5px;
-                        
-                        width: 215px;
-                    
-                        transition-property: all;
-                        transition-duration: 0.3s;
-                        transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
-                        transition-delay: 0s;
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
 
-                        &:hover
+                        .CTA
                         {
-                            width: 250px;
+                            background: @roxo;
+                            border-radius: 30px 30px 30px 5px;
+
+                            width: 215px;
+                            height: 40px;
+
+                            display: flex;
+                            justify-content: center;
+
+                            position: relative;
+
+                            overflow: hidden;
+
+                            &:active
+                            {
+                                transform: translateY(3px);
+                            }
+
+                            .contato-container
+                            {
+                                width: 100%;
+                                height: 110px;
+                                display: flex;
+
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                position: absolute;
+                                top: -10px;
+                        
+                                transition-property: all;
+                                transition-duration: 0.3s;
+                                transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
+                                transition-delay: 0s;
+
+                                &:hover
+                                {
+                                    top: -65px;
+                                }
+
+                                .entrar-em-contato
+                                {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px 0px;
+                                    gap: 10px;
+                                
+                                    text-decoration: none;
+                                
+                                    span
+                                    {
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                    
+                                        color: @branco;
+                                    }
+                                
+                                    img
+                                    {
+                                        width: 7px;
+                                        height: 12px;
+                                    }
+                                }
+
+                                .redes-contato
+                                {
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 5px;
+
+                                    width: 100%;
+
+                                    a
+                                    {
+                                        .contato-whatsapp
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+
+                                            display: flex;
+                                            justify-content: center;
+
+                                            background: #ffffff50;
+                                            border-radius: 15px 5px 5px 3px;
+
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+                                        }
+
+                                        .contato-email
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+
+                                            display: flex;
+                                            justify-content: center;
+
+                                            background: #ffffff50;
+                                            border-radius: 5px 15px 15px 5px;
+
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                        .CTA-calendly
+                        {
+                            border: @roxo solid;
+                            border-radius: 5px 30px 30px 30px;
+                            
+                            width: 170px;
+                            height: 40px;
+                        
+                            transition-property: all;
+                            transition-duration: 0.3s;
+                            transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
+                            transition-delay: 0s;
 
                             @media screen and (max-width: 992px)
                             {
                                 width: 100%;
                             }
-                        }
 
-                        &:active
-                        {
-                            transform: translateY(3px);
-                        }
-
-                        a
-                        {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            padding: 10px 0px;
-                            gap: 10px;
-                        
-                            text-decoration: none;
-                        
-                            span
+                            &:hover
                             {
-                                font-style: normal;
-                                font-weight: 500;
-                                font-size: 18px;
-                                line-height: 22px;
-                            
-                                color: @branco;
+                                width: 180px;
+
+                                @media screen and (max-width: 992px)
+                                {
+                                    width: 100%;
+                                }
                             }
-                        
-                            img
+
+                            a
                             {
-                                width: 7px;
-                                height: 12px;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 10px 0px;
+                                gap: 10px;
+                            
+                                text-decoration: none;
+                            
+                                span
+                                {
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                
+                                    color: @branco;
+
+                                    @media screen and (max-width: 992px)
+                                    {
+                                        font-size: 16px;
+                                        line-height: 16px;
+                                    }
+                                }
+                            
+                                img
+                                {
+                                    width: 7px;
+                                    height: 12px;
+                                }
                             }
                         }
                     }
@@ -1438,62 +1574,132 @@ body
 
                         .CTA-projetos
                         {
-                            border: @roxo solid;
-                            border-radius: 5px 30px 30px 30px;
-                            
-                            width: 210px;
-                        
-                            transition-property: all;
-                            transition-duration: 0.3s;
-                            transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
-                            transition-delay: 0s;
-
-                            @media screen and (max-width: 992px)
+                            border-radius: 30px 30px 30px 5px;
+                            border: solid @roxo;
+    
+                            width: 215px;
+    
+                            display: flex;
+                            justify-content: center;
+    
+                            position: relative;
+    
+                            overflow: hidden;
+    
+                            &:active
+                            {
+                                transform: translateY(3px);
+                            }
+    
+                            .contato-container
                             {
                                 width: 100%;
-                            }
-
-                            &:hover
-                            {
-                                width: 230px;
-
-                                @media screen and (max-width: 992px)
-                                {
-                                    width: 100%;
-                                }
-                            }
-
-                            a
-                            {
+                                height: 110px;
                                 display: flex;
-                                flex-direction: row;
-                                justify-content: center;
+    
+                                flex-direction: column;
+                                justify-content: space-around;
                                 align-items: center;
-                                padding: 10px 0px;
-                                gap: 10px;
-                            
-                                text-decoration: none;
-                            
-                                span
+    
+                                position: absolute;
+                                top: -7px;
+                        
+                                transition-property: all;
+                                transition-duration: 0.3s;
+                                transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
+                                transition-delay: 0s;
+    
+                                &:hover
                                 {
-                                    font-style: normal;
-                                    font-weight: 500;
-                                    font-size: 18px;
-                                    line-height: 22px;
+                                    top: -65px;
+                                }
+    
+                                .entrar-em-contato
+                                {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px 0px;
+                                    gap: 10px;
                                 
-                                    color: @branco;
-
-                                    @media screen and (max-width: 992px)
+                                    text-decoration: none;
+                                
+                                    span
                                     {
-                                        font-size: 16px;
-                                        line-height: 16px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                    
+                                        color: @branco;
+                                    }
+                                
+                                    img
+                                    {
+                                        width: 7px;
+                                        height: 12px;
                                     }
                                 }
-                            
-                                img
+    
+                                .redes-contato
                                 {
-                                    width: 7px;
-                                    height: 12px;
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 5px;
+    
+                                    width: 100%;
+    
+                                    a
+                                    {
+                                        .contato-whatsapp
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+    
+                                            display: flex;
+                                            justify-content: center;
+    
+                                            background: #ffffff50;
+                                            border-radius: 15px 5px 5px 3px;
+    
+                                            transition: .5s;
+    
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+    
+                                            &:hover
+                                            {
+                                                background: #ffffff70;
+                                            }
+                                        }
+    
+                                        .contato-email
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+    
+                                            display: flex;
+                                            justify-content: center;
+    
+                                            background: #ffffff50;
+                                            border-radius: 5px 15px 15px 5px;
+    
+                                            transition: .5s;
+    
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+    
+                                            &:hover
+                                            {
+                                                background: #ffffff70;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -1970,63 +2176,133 @@ body
 
                     .CTA-projetos
                     {
-                        border: @roxo solid;
-                        border-radius: 5px 30px 30px 30px;
-                        
-                        width: 210px;
-                    
-                        transition-property: all;
-                        transition-duration: 0.3s;
-                        transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
-                        transition-delay: 0s;
+                        border-radius: 30px 30px 30px 5px;
+                        border: solid @roxo;
 
-                        &:hover
+                        width: 215px;
+
+                        display: flex;
+                        justify-content: center;
+
+                        position: relative;
+
+                        overflow: hidden;
+
+                        &:active
                         {
-                            width: 230px;
-
-                            @media screen and (max-width: 992px)
-                            {
-                                width: 100%;
-                            }
+                            transform: translateY(3px);
                         }
 
-                        a
-                        {
-                            display: flex;
-                            flex-direction: row;
-                            justify-content: center;
-                            align-items: center;
-                            padding: 10px 0px;
-                            gap: 10px;
-                        
-                            text-decoration: none;
-                        
-                            span
-                            {
-                                font-style: normal;
-                                font-weight: 500;
-                                font-size: 18px;
-                                line-height: 22px;
-                            
-                                color: @branco;
-
-                                @media screen and (max-width: 992px)
-                                {
-                                    font-size: 16px;
-                                    line-height: 16px;
-                                }
-                            }
-                        
-                            img
-                            {
-                                width: 7px;
-                                height: 12px;
-                            }
-                        }
-
-                        @media screen and (max-width: 992px)
+                        .contato-container
                         {
                             width: 100%;
+                            height: 110px;
+                            display: flex;
+
+                            flex-direction: column;
+                            justify-content: space-around;
+                            align-items: center;
+
+                            position: absolute;
+                            top: -7px;
+                    
+                            transition-property: all;
+                            transition-duration: 0.3s;
+                            transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
+                            transition-delay: 0s;
+
+                            &:hover
+                            {
+                                top: -65px;
+                            }
+
+                            .entrar-em-contato
+                            {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 10px 0px;
+                                gap: 10px;
+                            
+                                text-decoration: none;
+                            
+                                span
+                                {
+                                    font-style: normal;
+                                    font-weight: 500;
+                                    font-size: 18px;
+                                    line-height: 22px;
+                                
+                                    color: @branco;
+                                }
+                            
+                                img
+                                {
+                                    width: 7px;
+                                    height: 12px;
+                                }
+                            }
+
+                            .redes-contato
+                            {
+                                display: flex;
+                                justify-content: center;
+                                gap: 5px;
+
+                                width: 100%;
+
+                                a
+                                {
+                                    .contato-whatsapp
+                                    {
+                                        width: 100px;
+                                        height: 30px;
+
+                                        display: flex;
+                                        justify-content: center;
+
+                                        background: #ffffff50;
+                                        border-radius: 15px 5px 5px 3px;
+
+                                        transition: .5s;
+
+                                        img
+                                        {
+                                            width: 20px;
+                                        }
+
+                                        &:hover
+                                        {
+                                            background: #ffffff70;
+                                        }
+                                    }
+
+                                    .contato-email
+                                    {
+                                        width: 100px;
+                                        height: 30px;
+
+                                        display: flex;
+                                        justify-content: center;
+
+                                        background: #ffffff50;
+                                        border-radius: 5px 15px 15px 5px;
+
+                                        transition: .5s;
+
+                                        img
+                                        {
+                                            width: 20px;
+                                        }
+
+                                        &:hover
+                                        {
+                                            background: #ffffff70;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -2396,62 +2672,132 @@ body
 
                         .CTA-projetos
                         {
-                            border: @roxo solid;
-                            border-radius: 5px 30px 30px 30px;
-                            
-                            width: 210px;
-                        
-                            transition-property: all;
-                            transition-duration: 0.3s;
-                            transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
-                            transition-delay: 0s;
-
-                            @media screen and (max-width: 992px)
+                            border-radius: 30px 30px 30px 5px;
+                            border: solid @roxo;
+    
+                            width: 215px;
+    
+                            display: flex;
+                            justify-content: center;
+    
+                            position: relative;
+    
+                            overflow: hidden;
+    
+                            &:active
+                            {
+                                transform: translateY(3px);
+                            }
+    
+                            .contato-container
                             {
                                 width: 100%;
-                            }
-
-                            &:hover
-                            {
-                                width: 230px;
-
-                                @media screen and (max-width: 992px)
-                                {
-                                    width: auto;
-                                }
-                            }
-
-                            a
-                            {
+                                height: 110px;
                                 display: flex;
-                                flex-direction: row;
-                                justify-content: center;
+    
+                                flex-direction: column;
+                                justify-content: space-around;
                                 align-items: center;
-                                padding: 10px 0px;
-                                gap: 10px;
-                            
-                                text-decoration: none;
-                            
-                                span
+    
+                                position: absolute;
+                                top: -7px;
+                        
+                                transition-property: all;
+                                transition-duration: 0.3s;
+                                transition-timing-function: cubic-bezier(0.26, 0, 0, 1.3);
+                                transition-delay: 0s;
+    
+                                &:hover
                                 {
-                                    font-style: normal;
-                                    font-weight: 500;
-                                    font-size: 18px;
-                                    line-height: 22px;
+                                    top: -65px;
+                                }
+    
+                                .entrar-em-contato
+                                {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: center;
+                                    align-items: center;
+                                    padding: 10px 0px;
+                                    gap: 10px;
                                 
-                                    color: @branco;
-
-                                    @media screen and (max-width: 992px)
+                                    text-decoration: none;
+                                
+                                    span
                                     {
-                                        font-size: 16px;
-                                        line-height: 16px;
+                                        font-style: normal;
+                                        font-weight: 500;
+                                        font-size: 18px;
+                                        line-height: 22px;
+                                    
+                                        color: @branco;
+                                    }
+                                
+                                    img
+                                    {
+                                        width: 7px;
+                                        height: 12px;
                                     }
                                 }
-                            
-                                img
+    
+                                .redes-contato
                                 {
-                                    width: 7px;
-                                    height: 12px;
+                                    display: flex;
+                                    justify-content: center;
+                                    gap: 5px;
+    
+                                    width: 100%;
+    
+                                    a
+                                    {
+                                        .contato-whatsapp
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+    
+                                            display: flex;
+                                            justify-content: center;
+    
+                                            background: #ffffff50;
+                                            border-radius: 15px 5px 5px 3px;
+    
+                                            transition: .5s;
+    
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+    
+                                            &:hover
+                                            {
+                                                background: #ffffff70;
+                                            }
+                                        }
+    
+                                        .contato-email
+                                        {
+                                            width: 100px;
+                                            height: 30px;
+    
+                                            display: flex;
+                                            justify-content: center;
+    
+                                            background: #ffffff50;
+                                            border-radius: 5px 15px 15px 5px;
+    
+                                            transition: .5s;
+    
+                                            img
+                                            {
+                                                width: 20px;
+                                            }
+    
+                                            &:hover
+                                            {
+                                                background: #ffffff70;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -3786,8 +4132,6 @@ body
 
             width: 100%;
             height: 145px;
-
-            padding: 0px 20px 30px 20px;
 
             .footer-row
             {
