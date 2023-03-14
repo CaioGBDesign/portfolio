@@ -88,12 +88,29 @@ a
         padding: 0px;
     }
 
+    .menu-mobile li
+    {
+        display: flex;
+        justify-content: center;
+    }
+
     .menu-mobile a
     {
         padding: 1rem 0;
         margin-inline: 1rem;
         border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
         border-radius: 0;
+    }
+
+    .menu-mobile-contato
+    {
+        display: flex;
+        gap: 20px;
+    }
+
+    .menu-mobile li a img
+    {
+        width: 15px;
     }
 
     .btn-menu-mobile
@@ -138,7 +155,7 @@ a
 
     .nav.active .menu-mobile
     {
-        height: 250px;
+        height: 440px;
         visibility: visible;
         overflow-y: auto;
     }
