@@ -103,17 +103,17 @@ function fecharOnvip()
   fecharOnvip.style.display="none";
 }
 
-//PopUp Under Construction
-function UnderConstruction()
+//PopUp Under Quiz
+function fecharQuizUX()
 {
-  var UnderConstruction = document.getElementById("PopupUnderConstruction");
-  UnderConstruction.style.display="flex";
+  var fecharQuizUX = document.getElementById("PopupQuizUX");
+  fecharQuizUX.style.display="none";
 }
 
-function fecharUnderConstruction()
+function fecharQuizDA()
 {
-  var fecharUnderConstruction = document.getElementById("PopupUnderConstruction");
-  fecharUnderConstruction.style.display="none";
+  var fecharQuizDA = document.getElementById("PopupQuizDA");
+  fecharQuizDA.style.display="none";
 }
 
 // Direção de arte
