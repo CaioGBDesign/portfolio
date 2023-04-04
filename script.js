@@ -103,11 +103,24 @@ function fecharOnvip()
   fecharOnvip.style.display="none";
 }
 
-//PopUp Under Quiz
+//PopUp Quiz UX
+function QuizUX()
+{
+  var QuizUX = document.getElementById("PopupQuizUX");
+  QuizUX.style.display="flex";
+}
+
 function fecharQuizUX()
 {
   var fecharQuizUX = document.getElementById("PopupQuizUX");
   fecharQuizUX.style.display="none";
+}
+
+//PopUp Quiz DA
+function QuizDA()
+{
+  var QuizDA = document.getElementById("PopupQuizDA");
+  QuizDA.style.display="flex";
 }
 
 function fecharQuizDA()
