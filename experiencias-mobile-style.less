@@ -1,0 +1,632 @@
+body
+{
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: #21132C;
+
+    .mobile-header
+    {
+        position: fixed;
+
+        width: 100%;
+        height: 86px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 1;
+
+        transition: .5s;
+
+        a
+        {
+            width: 80%;
+
+            display: flex;
+            align-items: center;
+
+            .logo
+            {
+                display: flex;
+                align-items: center;
+
+                width: 200px;
+
+                &:active
+                {
+                    transform: translateY(2px);
+                }
+
+                .logo-box
+                {
+                    display: flex;
+
+                    transition-property: all;
+                    transition-duration: 0.3s;
+                    transition-timing-function: cubic-bezier(0.42, 0.01, 0.05, 1.15);
+                    transition-delay: 0s;
+
+                    overflow: hidden;
+
+                    &:nth-child(1)
+                    {
+                        align-items: center;
+
+                        width: 20px;
+                        height: 23.74px;
+
+                        margin-right: 0px;
+
+                        img
+                        {
+                            width: 66.19px;
+                            height: 23.74px;
+                        }
+                    }
+
+                    &:nth-child(2)
+                    {
+                        align-items: center;
+
+                        width: 20px;
+                        height: 22.46px;
+
+                        img
+                        {
+                            width: 112px;
+                            height: 22.46px;
+                        }
+                    }
+
+                    &:nth-child(3)
+                    {
+                        align-items: flex-end;
+
+                        width: 6px;
+                        height: 22px;
+
+                        img
+                        {
+                            width: 6px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .scrolled
+    {
+        background: #39194F90;
+
+        a
+        {
+
+            .logo-box
+            {
+                &:nth-child(1)
+                {
+                    align-items: center;
+
+                    width: 66.19px;
+
+                    margin-right: 8px;
+                }
+
+                &:nth-child(2)
+                {
+                    align-items: center;
+
+                    width: 112px;
+                }
+
+                &:nth-child(3)
+                {
+                    align-items: flex-end;
+
+                    width: 6px;
+                }
+            }
+        }
+    }
+
+    .PF-Container
+    {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        section
+        {
+            width: 80%;  
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+
+            &:first-child
+            {
+                width: 100%;
+
+                background: #21132C url(https://caiogbdesign.github.io/portfolio/fundo-mobile.png) center center no-repeat;
+                background-size: cover;
+            }
+
+            .breadcrumb
+            {
+                width: 80%;
+
+                display: flex;
+                justify-content: center;
+
+                margin-top: 130px;
+
+                p
+                {
+                    text-align: center;
+                    color: #ECD4FF;
+
+                    margin: 0px;
+                    padding: 0px;
+
+                    font-size: 18px;
+
+                    span
+                    {
+                        color: #1ABBC9;
+                    }
+                }
+            }
+
+            .experiencia
+            {
+                width: 80%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                img
+                {
+                    width: 30px;
+                }
+
+                p
+                {                    
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 18px;
+
+                    color: #FFFFFF;
+                }
+            }
+
+            .acesso-empresa
+            {
+                width: 80%;
+
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+
+                opacity: .5;
+
+                gap: 16px;
+
+                a
+                {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+
+                    text-decoration: none;
+
+                    img
+                    {
+                        width: 16px;
+                    }
+
+                    span
+                    {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 17px;
+
+                        color: #ECD4FF;
+                    }
+                }
+            }
+
+            .descricao-job
+            {
+                width: 100%;
+
+                p
+                {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+
+                    color: #ECD4FF;
+
+                    width: 100%;
+                }
+            }
+
+            .referencias
+            {
+                width: 100%;
+
+                background: #39194F;
+
+                border-radius: 20px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 50px 0px 0px 0px;
+
+                .titulo
+                {
+                    margin-bottom: 50px;
+
+                    span
+                    {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: center;
+
+                        color: #ECD4FF;
+                    }
+                }
+
+                .contatos
+                {
+                    margin-bottom: 50px;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    
+                    p
+                    {
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 22px;
+                        text-align: center;
+
+                        color: #FFFFFF;
+
+                        margin: 0px;
+
+                        span
+                        {
+                            color: #1ABBC9;
+
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 22px;
+                            text-align: center;
+                        }
+                    }
+
+                    .email-copy
+                    {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        span
+                        {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 19px;
+
+                            color: #ECD4FF;
+                        }
+
+                        svg
+                        {
+                            width: 10px;
+                        }
+                    }
+
+                    .solicitar-whats
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 90%;
+                        height: 40px;
+
+                        background: #9424C9;
+                        border-radius: 20px;
+
+                        span
+                        {
+                            text-align: center;
+
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;                            
+
+                            text-align: center;
+
+                            color: #ECD4FF;
+                        }
+                    }
+                }
+            }
+
+            .skils-titulo
+            {
+                width: 100%;
+
+                margin-top: 40px;
+
+                span
+                {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 20px;
+
+                    color: #ECD4FF;
+                }
+            }
+            
+            .experiences-softwares
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: baseline;
+
+                width: 100%;
+
+                gap: 30px;
+
+                margin-bottom: 80px;
+                
+                .software
+                {
+                    width: 100%;
+    
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+    
+                    gap: 10px;
+    
+                    position: relative;
+
+                    .logo-dominio-bg
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50px;
+                        border: solid #ffffff20;
+    
+                        z-index: 1;
+    
+                        img
+                        {
+                            width: 40%;
+                        }
+    
+                        span
+                        {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 36px;
+                            text-align: center;
+                            color: #FFFFFF;
+                        }
+                    }
+
+                    .FHCJ
+                    {
+                        background: #1E1E1E;
+                    }
+    
+                    .UX
+                    {
+                        background: #9424C9;
+                    }
+    
+                    .UI
+                    {
+                        background: #1ABBC9;
+                    }
+    
+                    .blender
+                    {
+                        background: #E87D0D;
+                    }
+    
+                    .AI
+                    {
+                        background: #330000;
+                    }
+    
+                    .PS
+                    {
+                        background: #001E36;
+                    }
+    
+                    .AE, .PR
+                    {
+                        background: #00005B;
+                    }
+    
+                    p
+                    {
+                        color: #ffffff;
+    
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 15px;
+    
+                        z-index: 1;
+                    }
+
+                    .software-water
+                    {
+                        width: 0;
+                        height: 100%;
+    
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+    
+                        background-color: #39194F80;
+                        animation: fill-water 3s cubic-bezier(0, 0, 0, 0.83) forwards;
+    
+                        border-radius: 50px;
+        
+                        overflow: hidden;
+    
+                        @keyframes fill-water
+                        {
+                            0%
+                            {
+                                width: 0;
+                            }
+    
+                            100%
+                            {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                    .width-60
+                    {
+                        max-width: 60%;
+                    }
+    
+                    .width-70
+                    {
+                        max-width: 70%;
+                    }
+    
+                    .width-80
+                    {
+                        max-width: 80%;
+                    }
+    
+                    .width-90
+                    {
+                        max-width: 90%;
+                    }
+    
+                    .width-100
+                    {
+                        max-width: 100%;
+                    }
+    
+                    .delay-1
+                    {
+                        animation-delay: .1s;
+                    }
+    
+                    .delay-2
+                    {
+                        animation-delay: .2s;
+                    }
+    
+                    .delay-3
+                    {
+                        animation-delay: .3s;
+                    }
+    
+                    .delay-4
+                    {
+                        animation-delay: .4s;
+                    }
+    
+                    .delay-5
+                    {
+                        animation-delay: .5s;
+                    }
+    
+                    .delay-6
+                    {
+                        animation-delay: .6s;
+                    }
+    
+                    .delay-7
+                    {
+                        animation-delay: .7s;
+                    }
+    
+                    .delay-8
+                    {
+                        animation-delay: .8s;
+                    }
+    
+                    .delay-9
+                    {
+                        animation-delay: .9s;
+                    }
+    
+                    .delay-10
+                    {
+                        animation-delay: 1s;
+                    }
+    
+                    .delay-11
+                    {
+                        animation-delay: 1.2s;
+                    }
+    
+                    .delay-12
+                    {
+                        animation-delay: 1.3s;
+                    }
+    
+                    .delay-13
+                    {
+                        animation-delay: .4s;
+                    }
+    
+                    .delay-14
+                    {
+                        animation-delay: .4s;
+                    }
+                }
+            }
+        }
+    }
+}
