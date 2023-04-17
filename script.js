@@ -45,320 +45,105 @@ btnMenu.addEventListener("click", handleButtonClick);
 btnMenu.addEventListener("touchstart", handleButtonClick);
 
 
-//PopUp qualidoc
-function qualidocA()
-{
-  var qualidoc = document.getElementById("PopupQualidoc");
-  qualidoc.style.display="flex";
-}
+// popups
+// Seleciona todos os botões e itera sobre cada um
+const buttons = document.querySelectorAll('.botao');
+buttons.forEach((button) => {
+  // Adiciona um listener de clique a cada botão
+  button.addEventListener('click', () => {
+    // Seleciona o ID do popup associado a este botão
+    const popupId = button.getAttribute('data-popup');
+    // Seleciona o elemento do DOM que possui o ID do popup
+    const popup = document.getElementById(popupId);
+    // Exibe o popup
+    popup.style.display = 'grid';
+  });
+  // Impede que o clique dentro do botão se propague para fora dele
+  button.querySelector('span').addEventListener('mousedown', (event) => {
+    event.stopPropagation();
+  });
+});
 
-function qualidocB()
-{
-  var qualidoc = document.getElementById("PopupQualidoc");
-  qualidoc.style.display="flex";
-}
+// Adiciona um listener de clique em todo o documento
+document.addEventListener('mousedown', (event) => {
+  // Seleciona todos os popups
+  const popups = document.querySelectorAll('.popup');
+  // Verifica se o clique foi dentro de algum dos popups
+  const isClickInsidePopup = Array.from(popups).some(popup => popup.contains(event.target));
+  // Se o clique não foi dentro de nenhum popup, esconde todos eles
+  if (!isClickInsidePopup) {
+    Array.from(popups).forEach((popup) => {
+      popup.style.display = 'none';
+    });
+  }
+});
 
-function fecharQualidoc()
-{
-  var fecharQualidoc = document.getElementById("PopupQualidoc");
-  fecharQualidoc.style.display="none";
-}
 
-//PopUp YouExp
-function YouExp()
-{
-  var YouExp = document.getElementById("PopupYouexp");
-  YouExp.style.display="flex";
-}
+const closeButtons = document.querySelectorAll('.close-button');
+closeButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const popup = button.parentNode;
+    popup.style.display = 'none';
+  });
+});
 
-function fecharYouExp()
-{
-  var fecharYouExp = document.getElementById("PopupYouexp");
-  fecharYouExp.style.display="none";
-}
-
-//PopUp Onofre
-function Onofre()
-{
-  var Onofre = document.getElementById("PopupOnofre");
-  Onofre.style.display="flex";
-}
-
-function fecharOnofre()
-{
-  var fecharOnofre = document.getElementById("PopupOnofre");
-  fecharOnofre.style.display="none";
-}
-
-//PopUp Onvip
-function Onvip()
-{
-  var Onvip = document.getElementById("PopupOnvip");
-  Onvip.style.display="flex";
-}
-
-function fecharOnvip()
-{
-  var fecharOnvip = document.getElementById("PopupOnvip");
-  fecharOnvip.style.display="none";
-}
-
-//PopUp Quiz UX
-function QuizUX()
-{
-  var QuizUX = document.getElementById("PopupQuizUX");
-  QuizUX.style.display="flex";
-}
-
-function fecharQuizUX()
-{
-  var fecharQuizUX = document.getElementById("PopupQuizUX");
-  fecharQuizUX.style.display="none";
-}
-
-//PopUp Quiz DA
-function QuizDA()
-{
-  var QuizDA = document.getElementById("PopupQuizDA");
-  QuizDA.style.display="flex";
-}
-
-function fecharQuizDA()
-{
-  var fecharQuizDA = document.getElementById("PopupQuizDA");
-  fecharQuizDA.style.display="none";
-}
 
 // Direção de arte
+const body = document.body;
+const boxes = document.querySelectorAll(".box-pantene");
+const paragraphs = document.querySelectorAll("p, h2");
 
-function FundoRosa()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#DF5297";
+boxes.forEach((box) => {
+  box.addEventListener("click", () => {
+    // Seleciona o elemento "span" dentro do elemento ".color-value" dentro do elemento clicado
+    const colorValue = box.querySelector(".color-value span");
+    // Obtém o valor do texto dentro do elemento "span"
+    const backgroundColor = colorValue.innerText;
 
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
+    // Obtém a cor atual do fundo do elemento #adobe
+    const adobeBackgroundColor = document.querySelector("#adobe").style.backgroundColor;
 
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
+    if (backgroundColor === "#21132C") {
+      // Define a cor de fundo do elemento clicado como a cor obtida
+      document.body.style.backgroundColor = backgroundColor;
+      boxes.forEach((box) => {
+        box.style.backgroundColor = "#ffffff";
+      });
+      document.querySelector("#adobe").style.backgroundColor = backgroundColor;
 
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
+      // Define a cor dos parágrafos com base na cor atual do fundo do elemento #adobe
+      if (adobeBackgroundColor === backgroundColor) {
+        paragraphs.forEach((p) => {
+          p.style.color = "#21132C";
+        });
+      } else {
+        paragraphs.forEach((p) => {
+          p.style.color = "#ffffff";
+        });
+      }
+    } else {
+      // Define a cor de fundo de todos os elementos como branco
+      boxes.forEach((box) => {
+        box.style.backgroundColor = "#ffffff";
+      });
+      document.querySelector("#adobe").style.backgroundColor = backgroundColor;
+      paragraphs.forEach((p) => {
+        p.style.color = "#ffffff";
+      });
+    }
   });
-}
+});
 
-function FundoVerdeEscuro()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#98BA7D";
 
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
+//Softwares
+$(document).ready(function() {
+  $('#open-popup-button').click(function() {
+    $('.software-background').addClass('animated');
   });
-}
+});
 
-function FundoVerdeClaro()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#91BEB9";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoRoxo()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#7D80C7";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoAzulClaro()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#A5D3E0";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#2B5561";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#2B5561";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#2B5561';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoAzulEscuro()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#51A4F4";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoLaranjaClaro()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#FFC16E";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoLaranja()
-{
-  var Laranja = document.getElementById("adobe");
-  Laranja.style.background="#FF6A18";
-
-  var Laranja = document.getElementById("titulo");
-  Laranja.style.background="none";
-  Laranja.style.color="#ffffff";
-  Laranja.classList.remove("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ffffff";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(-10px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff';
-    box.style.opacity = '1';
-  });
-}
-
-function FundoOriginal()
-{
-  var original = document.getElementById("adobe");
-  original.style.background="#21132C";
-
-  var original = document.getElementById("titulo");
-  original.style.color="#1ABBC9";
-  original.classList.add("tituloGradiente");
-
-  var paragrafoDarte = document.getElementById("paragrafo-darte");
-  paragrafoDarte.style.color="#ECD4FF";
-
-  var original = document.getElementById("original");
-  original.style.transform="translateY(0px)";
-
-  const boxes = document.querySelectorAll('.box-pantene');
-
-  boxes.forEach(box => {
-    box.style.backgroundColor = '#ffffff10';
-    box.style.opacity = '0.5';
-  });
-}
-
-// Menu mobile
-let list = document.querySelectorAll('.port-list');
-function activeLink(){
-  list.forEach((item) =>
-  item.classList.remove('active'));
-  this.classList.add('active');
-}
-
-list.forEach((item)=>
-item.addEventListener('click',activeLink));
 
 // Copiar e-mail
-
 function CopiarNadia()
 {
   navigator.clipboard.writeText('nadiazarour@gmail.com').then(() => 
@@ -383,33 +168,19 @@ function CopiarRafael()
   }); 
 }
 
+function CopiarRoger()
+{
+  navigator.clipboard.writeText('rogertgoulart@gmail.com').then(() => 
+  { 
+    console.log('codigo copiado')
+  }); 
+}
 
-// Contagem regressiva
-
-// Data de início
-var countDownDate = new Date("Apr 05, 2023 12:00:00").getTime();
-
-// Para atualizar a contagem regressiva a cada 1 segundo
-var x = setInterval(function() {
-
-  // Obter data e hora de hoje
-  var now = new Date().getTime();
-    
-  // Para encontrar a distância entre a data inicial e a final
-  var distance = countDownDate - now;
-    
-  // Cálculos
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Resultado no front
-  document.getElementById("cronometro").innerHTML = "<div>" + days + "<p>" + "Dias" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + hours + "<p>" + "Horas" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + minutes + "<p>" + "Minutos" + "</p>" + "</div>" + "<span>" + ":" + "</span>" + "<div>" + seconds + "<p>" + "Segundos" + "</p>" + "</div>";
-    
-  // Quando a contagm terminar
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("cronometro").innerHTML = "EXPIRED";
+window.addEventListener('scroll', function() {
+  var headerDesktop = document.querySelector('.header-desktop');
+  if (window.scrollY > 100) {
+    headerDesktop.classList.add('header-background');
+  } else {
+    headerDesktop.classList.remove('header-background');
   }
-}, 1000);
+});
