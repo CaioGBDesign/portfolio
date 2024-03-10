@@ -1,0 +1,555 @@
+.modal
+{
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 1000;
+
+    @media screen and (max-width: 992px)
+    {
+        align-items: end;
+    }
+
+    .fechar-modal
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 50px;
+        height: 50px;
+
+        color: #aaa;
+
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        background: #ffffff30;
+        border-radius: 50px;
+        border: none;
+
+        transition: .2s;
+
+        &:hover
+        {
+            text-decoration: none;
+
+            transform: rotate(90deg);
+        }
+
+        @media screen and (max-width: 992px)
+        {
+            width: 30px;
+            height: 30px;
+
+            top: 10px;
+            right: 10px;
+        }
+    }
+
+    .projeto-modal
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        height: 100vh;
+
+        @media screen and (max-width: 992px)
+        {
+            width: 100%;
+            height: 95vh;
+        }
+
+        .detalhes-projeto
+        {
+            display: flex;
+            flex-direction: column;
+
+            height: 90vh;
+
+            overflow-x: scroll;
+
+            border: solid #392C43;
+            border-radius: 10px;
+
+            @media screen and (max-width: 992px)
+            {
+                width: 100%;
+                height: 100vh;
+
+                border: none;
+                border-radius: 30px 30px 0px 0px;
+            }
+    
+            &::-webkit-scrollbar
+            {
+                display: none;
+            }
+
+            img
+            {
+                width: 900px;
+
+                @media screen and (max-width: 992px)
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+        .detalhes-empresa
+        {
+            background: linear-gradient(0deg, rgba(148, 36, 201, 0.1), rgba(148, 36, 201, 0.1)), linear-gradient(0deg, #21132C, #21132C), #FFFFFF;
+        
+            height: 90vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            padding: 0px 20px;
+
+            border: solid #392C43;
+            border-radius: 10px;
+
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar
+            {
+                display: none;
+            }
+
+            @media screen and (max-width: 992px)
+            {
+                justify-content: start;
+                flex-direction: column;
+                gap: 60px;
+
+                padding: 30px 0px;
+
+                height: auto;
+
+                border: none;
+                border-radius: 30px 30px 0px 0px;
+            }
+
+            .container-skills
+            {
+                display: flex;
+                justify-content: center;
+
+                width: 200px;
+                height: 80vh;
+
+                overflow-x: auto;
+
+                @media screen and (max-width: 992px)
+                {
+                    justify-content: initial;
+                    
+                    width: 90%;
+                    height: auto;
+
+                    overflow: initial;
+                }
+
+                &::-webkit-scrollbar
+                {
+                    width: 5px;
+                }
+
+                &::-webkit-scrollbar-track
+                {
+                    background: #88888860;
+                }
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background: #1ABBC9;
+                    border-radius: 5px;
+                }
+
+                &::-webkit-scrollbar-thumb:hover
+                {
+                    background: #16b2c0;
+                }
+
+                .skils-demandadas
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 25px;
+
+                    @media screen and (max-width: 992px)
+                    {
+                        display: grid;
+                        grid-template-columns: auto auto auto auto auto auto auto auto;
+                        
+                        width: 100%;
+                        gap: 20px 0px;
+                    }
+
+                    .nome-skill
+                    {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        width: 150px;
+
+                        @media screen and (max-width: 992px)
+                        {
+                            width: auto;
+                        }
+
+                        img
+                        {
+                            width: 26px;
+                            height: 26px;
+                        }
+
+                        span
+                        {
+                            font-size: 12px;
+                            color: #ffffff;
+
+                            @media screen and (max-width: 992px)
+                            {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .descricao-trabalho
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                width: 500px;
+                height: 80vh;
+
+                @media screen and (max-width: 992px)
+                {
+                    width: 90%;
+                    height: auto;
+                }
+
+                .container-demandas
+                {
+                    display: flex;
+                    justify-content: center;
+
+                    width: 500px;
+                    height: 90vh;
+
+                    background: #39194F;
+                    border-radius: 20px;
+
+                    overflow-x: scroll;
+
+                    @media screen and (max-width: 992px)
+                    {
+                        width: 100%;
+                        height: auto;
+                        background: none;
+
+                        border-radius: 20px;
+
+                        overflow-x: scroll;
+                    }
+
+                    &::-webkit-scrollbar
+                    {
+                        display: none;
+                    }
+
+                    .detalhes-demandas
+                    {
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        width: 420px;
+
+                        margin-top: 30px;
+
+                        @media screen and (max-width: 992px)
+                        {
+                            gap: 40px;
+
+                            width: 100%;
+
+                            margin-top: 0px;
+                        }
+
+                        .nome-empresa
+                        {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
+
+                            @media screen and (max-width: 992px)
+                            {
+                                
+                            }
+
+                            img
+                            {
+                                width: 40px;
+                                height: 40px;
+                            }
+
+                            .empresa-data
+                            {
+                                display: flex;
+                                flex-direction: column;
+
+                                span
+                                {
+                                    color: #FFFFFF;
+
+                                    font-weight: bold;
+                                }
+
+                                p
+                                {
+                                    margin: 0;
+
+                                    color: #ffffff;
+                                }
+                            }
+                        }
+
+                        .registro
+                        {
+                            h1
+                            {
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 19px;
+                                color: #ffffff;
+
+                                margin: 0px;
+                            }
+                        }
+
+                        ul
+                        {
+                            margin: 0;
+
+                            width: 80%;
+
+                            padding: 0px 20px;
+
+                            @media screen and (max-width: 992px)
+                            {
+                                width: 100%;
+
+                                padding: 0px;
+                            }
+
+                            li
+                            {
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 21px;
+                                color: #ffffff;
+
+                                margin: 10px 0px;
+
+                                @media screen and (max-width: 992px)
+                                {
+                                    list-style: none;
+                                }
+                            }
+                        }
+
+                        p
+                        {
+                            margin: 0;
+
+                            width: 100%;
+
+                            color: #ffffff;
+                        }
+                    }
+                }
+            }
+
+            .container-referencias
+            {
+                display: flex;
+                justify-content: center;
+
+                width: 300px;
+                height: 80vh;
+
+                border-radius: 20px;
+
+                overflow-x: auto;
+
+                @media screen and (max-width: 992px)
+                {
+                    width: 90%;
+                    height: auto;
+
+                    overflow-x: initial;
+
+                    background: #39194F;
+                }
+
+                &::-webkit-scrollbar
+                {
+                    width: 5px;
+                }
+
+                &::-webkit-scrollbar-track
+                {
+                    background: #88888860;
+                }
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background: #1ABBC9;
+                    border-radius: 5px;
+                }
+
+                &::-webkit-scrollbar-thumb:hover
+                {
+                    background: #16b2c0;
+                }
+
+                .referencias
+                {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                    width: 220px;
+
+                    @media screen and (max-width: 992px)
+                    {
+                        width: auto;
+
+                        padding: 40px 0px;
+                    }
+
+                    h1
+                    {
+                        margin: 0;
+
+                        font-size: 16px;
+                        font-weight: normal;
+
+                        color: #FFFFFF;
+
+                        @media screen and (max-width: 992px)
+                        {
+                            text-align: center;
+                        }
+                    }
+
+                    .contato-referencia
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        opacity: .5;
+
+                        transition: .2s;
+
+                        @media screen and (max-width: 992px)
+                        {
+                            align-items: center;
+
+                            opacity: 1;
+                        }
+        
+                        &:hover
+                        {
+                            opacity: 1;
+                        }
+
+                        .nome-contato
+                        {
+
+                            @media screen and (max-width: 992px)
+                            {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            p
+                            {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: #FFFFFF;
+    
+                                margin: 0;
+                            }
+    
+                            span
+                            {
+                                font-size: 14px;
+                                font-weight: bold;
+                                color: #1ABBC9;
+    
+                                margin: 0;
+                            }
+                        }
+
+                        a
+                        {
+                            text-decoration: none;
+
+                            .solicitar
+                            {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                background: #9424C9;
+
+                                padding: 10px;
+
+                                font-size: 14px;
+                                color: #ffffff;
+
+                                width: 200px;
+
+                                border-radius: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
