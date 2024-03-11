@@ -154,7 +154,7 @@
 
     <main>
 
-        <article id="header">
+        <article class="nav" id="header">
             <div class="header-mobile">
                 <div class="sidebar">
 
@@ -1825,8 +1825,6 @@
                 <img src="imagens\app liah\app-liah-06.jpg" alt="app liah">
                 <img src="imagens\app liah\app-liah-07.jpg" alt="app liah">
                 <img src="imagens\app liah\app-liah-08.jpg" alt="app liah">
-                <img src="imagens\app liah\app-liah-09.jpg" alt="app liah">
-                <img src="imagens\app liah\app-liah-10.jpg" alt="app liah">
             </div>
         </div>
     </div>
@@ -1867,8 +1865,6 @@
                 <img src="imagens\guiamoto\guiamoto-06.jpg" alt="guiamoto">
                 <img src="imagens\guiamoto\guiamoto-07.jpg" alt="guiamoto">
                 <img src="imagens\guiamoto\guiamoto-08.jpg" alt="guiamoto">
-                <img src="imagens\guiamoto\guiamoto-09.jpg" alt="guiamoto">
-                <img src="imagens\guiamoto\guiamoto-10.jpg" alt="guiamoto">
             </div>
         </div>
     </div>
@@ -1887,9 +1883,6 @@
                 <img src="imagens\quest\quest-05.jpg" alt="quest">
                 <img src="imagens\quest\quest-06.jpg" alt="quest">
                 <img src="imagens\quest\quest-07.jpg" alt="quest">
-                <img src="imagens\quest\quest-08.jpg" alt="quest">
-                <img src="imagens\quest\quest-09.jpg" alt="quest">
-                <img src="imagens\quest\quest-10.jpg" alt="quest">
             </div>
         </div>
     </div>
@@ -2524,6 +2517,19 @@
     </div>
     <!-- /modal Onvip -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+<script src="header.js"></script>
     <script src="modais.js"></script>
     <script src="menu-lateral.js"></script>
     
